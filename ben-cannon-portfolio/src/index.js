@@ -4,7 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import WorkPage from './WorkPage';
+import WorkPage from './pages/WorkPage';
+import HomePage from './pages/HomePage';
+import UniPage from './pages/UniPage';
+import ExtraCurricular from './pages/ExtraCurricularPage';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +17,18 @@ const router = createBrowserRouter([
           {
               path: '/Portfolio/work',
               element: <WorkPage />,
+          },
+          {
+              path: '/Portfolio/home',
+              element: <HomePage />,
+          },
+          {
+              path: '/Portfolio/uni',
+              element: <UniPage />,
+          },
+          {
+              path: '/Portfolio/extracurricular',
+              element: <ExtraCurricular />,
           },
       ]
   }

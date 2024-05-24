@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import WorkPage from "./WorkPage";
-import NavBar from "./NavBar";
+import WorkPage from "./pages/WorkPage";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
