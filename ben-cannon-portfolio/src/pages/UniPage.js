@@ -1,7 +1,7 @@
 function UniPage() {
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>University page</h1>
+      <h1 className='text-3xl font-bold font-mono'>University</h1>
     </>
   );
 }
