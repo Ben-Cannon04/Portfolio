@@ -1,5 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
-import WorkPage from "./pages/WorkPage";
+import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 function App() {
