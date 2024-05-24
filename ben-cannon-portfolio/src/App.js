@@ -5,7 +5,10 @@ function App() {
   return (
     <>
         <NavBar />
-        <Outlet />
+        <main className="text-center py-2">
+          <Outlet/>
+        </main>
+        
     </>
   );
 }
