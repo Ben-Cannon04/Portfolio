@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+import { Link, Outlet } from "react-router-dom";
+import WorkPage from "./WorkPage";
+import NavBar from "./NavBar";
 
 function App() {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Home page</h1>
-    </div>
+    <>
+        <NavBar />
+        <Outlet />
+    </>
   );
 }
 
