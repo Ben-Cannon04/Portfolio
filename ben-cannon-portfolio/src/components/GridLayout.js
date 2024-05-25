@@ -2,7 +2,7 @@ function GridLayout({ boxes }) {
   const style = 'bg-neutral-100 border-4 rounded-xl p-2 flex flex-col items-center justify-center';
 
   return (
-    <div className='grid md:grid-cols-4 auto-rows-[300px] gap-5 m-10'>
+    <div className='grid md:grid-cols-4 auto-rows-[300px] gap-5 my-10 mx-10 md:mx-20 lg:mx-32'>
       {boxes.map((item, i) => (
         <div
           key={i}
