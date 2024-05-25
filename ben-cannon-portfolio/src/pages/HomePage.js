@@ -1,8 +1,9 @@
 import GridLayout from "../components/GridLayout";
 
 function HomePage() {
-  const data = [<div><h2>Hello</h2></div>, <div><a href="https://www.linkedin.com/in/ben-cannon-4b0310256/">Goodbye.</a></div>,
-  <div><p>About me</p></div>, <div><h2>Image</h2></div>, <div><h2>Hello</h2></div>, <div><h2>Hello</h2></div>]
+  const data = [<div><h2>Hello</h2></div>, <div>
+  <a href="https://www.linkedin.com/in/ben-cannon-4b0310256/" target="_blank">linkedin</a></div>,<div><p>About me</p></div>,
+  <div><h2>Image</h2></div>, <div><h2>Hello</h2></div>, <div><h2>Hello</h2></div>]
 
   return (
     <>
