@@ -1,5 +1,10 @@
-function GridLayout({ boxes }) {
-  const style = 'bg-neutral-100 border-4 rounded-xl p-2 flex flex-col items-center justify-center';
+import { useEffect, useState } from "react"
+import useLocalStorage from "use-local-storage"
+
+function GridLayout({ boxes, lightTheme }) {
+
+  const bgColor = lightTheme ? 'bg-neutral-100 text-black ' : 'bg-zinc-800 text-slate-300 '
+  const style = bgColor + 'border-4 rounded-xl p-2 flex flex-col items-center justify-center';
 
   return (
     <div className='grid md:grid-cols-4 auto-rows-[300px] gap-5 my-10 mx-10 md:mx-20 lg:mx-32'>
