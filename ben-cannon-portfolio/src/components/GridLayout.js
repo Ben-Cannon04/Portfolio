@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react"
-import useLocalStorage from "use-local-storage"
-
 function GridLayout({ boxes, lightTheme }) {
 
   const bgColor = lightTheme ? 'bg-neutral-100 text-black ' : 'bg-zinc-800 text-slate-300 '
