@@ -24,7 +24,7 @@ function HomePage() {
   <DescriptionBox title="university" content={"I'm currently in my 2nd year of my computer science degree at the University of Sheffield."
     + " During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability."
   } link="/Portfolio/uni"/>,
-  <DescriptionBox />]
+  <DescriptionBox title={"?????????"}/>]
 
   return (
     <div>
