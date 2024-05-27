@@ -9,7 +9,7 @@ function GridLayout({ boxes, lightTheme }) {
         <div
           key={i}
           className={`${style} ${
-            i === 0 || i === 4 || i === 5 || i === 6 ? 'md:col-span-2' : ''
+            i === 0 || i === 4 || i === 5 ? 'md:col-span-2' : ''
           } ${i === 2 ? 'md:row-span-2' : ''}`}
         >
           {boxes[i]}
