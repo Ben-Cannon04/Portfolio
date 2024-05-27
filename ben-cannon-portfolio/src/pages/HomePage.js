@@ -14,9 +14,9 @@ function HomePage() {
   const data = [<DescriptionBox title="about me." content="Hi my name is Ben Cannon. I'm a Computer Science student at the University of Sheffield."/>, 
   <IconBox link="https://www.linkedin.com/in/ben-cannon04" icon={<LinkedInIcon fontSize="inherit"/>}/>,
 
-  <DescriptionBox title="work experience"  content={"During my internship I worked as part of a fully agile software development team, participating in daily standups, "
-    +"planning, show/tell and retrospectives. I have developed application features using JavaScript, Java, and Python,"
-    +" and worked on DevOps tasks to improve the CI/CD pipeline."} link="/Portfolio/work"/>,
+  <DescriptionBox title="work experience"  content={"I have worked as a software intern at Yunex Traffic, where I was able to "
+    +"use python, javascript and java. I'm starting my role as junior developer at Certara on June 10th."
+  } link="/Portfolio/work"/>,
 
   <DarkModeBox enabled={enabled} setEnabled={setEnabled}/>,
   <DescriptionBox title="extracurricular" content={"In my spare time I have competed in multiple Hackathons and GameJams."
