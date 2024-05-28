@@ -1,5 +1,11 @@
-function GridLayout({ boxes, lightTheme }) {
+function GridLayout({ boxes, lightTheme, horizontalBoxes, verticalBoxes }) {
 
+  if (!horizontalBoxes){
+    horizontalBoxes = [0, 4, 5]
+  }
+  if (!verticalBoxes){
+    verticalBoxes = [2]
+  }
   const bgColor = lightTheme ? 'bg-neutral-100 text-black ' : 'bg-zinc-800 text-slate-300 '
   const style = bgColor + 'border-4 rounded-xl p-2 flex flex-col items-center justify-center';
 
@@ -9,8 +15,8 @@ function GridLayout({ boxes, lightTheme }) {
         <div
           key={i}
           className={`${style} ${
-            i === 0 || i === 4 || i === 5 ? 'md:col-span-2' : ''
-          } ${i === 2 ? 'md:row-span-2' : ''}`}
+            horizontalBoxes.includes(i) ? 'md:col-span-2' : ''
+          } ${verticalBoxes.includes(i) ? 'md:row-span-2' : ''}`}
         >
           {boxes[i]}
         </div>
