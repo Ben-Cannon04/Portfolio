@@ -11,12 +11,12 @@ function ProjectsPage() {
   const data = [
     <SkillsBox title={"Portfolio"} content={"Website hosted through Github pages. Using the libarys: React Router, UseLocalStorage, Material Icon UI"} 
     skills={["react js", "Tailwind css", "Github pages"]}/>,
-
+    <SkillsBox title={"Sheffjam 9"} />
     ]
 
   return (
     <div className={style}>
-      {data && <GridLayout boxes={data} lightTheme={enabled} horizontalBoxes={[0]} verticalBoxes={[0]} />}
+      {data && <GridLayout boxes={data} lightTheme={enabled} horizontalBoxes={[0, 1]} verticalBoxes={[]} />}
     </div>
   );
   }
