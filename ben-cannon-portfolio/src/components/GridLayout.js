@@ -14,9 +14,9 @@ function GridLayout({ boxes, lightTheme, horizontalBoxes, verticalBoxes }) {
       {boxes.map((item, i) => (
         <div
           key={i}
-          className={`${style} ${
-            horizontalBoxes.includes(i) ? 'md:col-span-2' : ''
-          } ${verticalBoxes.includes(i) ? 'md:row-span-2' : ''}`}
+          className={`${style} 
+            ${horizontalBoxes.includes(i) ? 'md:col-span-2' : ''}
+            ${verticalBoxes.includes(i) ? 'md:row-span-2' : ''} `}
         >
           {boxes[i]}
         </div>

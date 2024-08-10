@@ -7,7 +7,7 @@ import WorkPage from './pages/WorkPage';
 import HomePage from './pages/HomePage';
 import UniPage from './pages/UniPage';
 import ExtraCurricular from './pages/ExtraCurricularPage';
-import PortfolioCreation from './pages/PortfolioCreationPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 
 
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
               element: <ExtraCurricular />,
           },
           {
-              path: '/Portfolio/creation',
-              element: <PortfolioCreation />,
+              path: '/Portfolio/projects',
+              element: <ProjectsPage />,
           },
       ]
   }

@@ -25,8 +25,8 @@ function HomePage() {
   <DescriptionBox title="university" content={"I'm currently in my 2nd year of my computer science degree at the University of Sheffield."
     + " During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability."
   } link="/Portfolio/uni"/>,
-  <DescriptionBox title="portfolio creation"  content={"I used react, tailwind css and github pages to create my portfolio"}
-   link="/Portfolio/creation"/>,
+  <DescriptionBox title="projects"  content={""}
+   link="/Portfolio/projects"/>,
   <IconBox link="https://github.com/Ben-Cannon04" icon={<GitHubIcon fontSize="inherit"/>}/>]
 
   return (
