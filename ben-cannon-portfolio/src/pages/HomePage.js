@@ -11,6 +11,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function HomePage() {
   const [enabled, setEnabled] = useOutletContext();
   
+  const bgColor = enabled ? 'text-black ' : 'text-slate-300 '
+  const style = bgColor + ' grid md:grid-cols-1 auto-rows-[300px] flex flex-col h-screen gap-5 my-10 mx-10 md:mx-20 lg:mx-32'
+
   const data = [<DescriptionBox title="about me." content="Hi my name is Ben Cannon. I'm a Computer Science student at the University of Sheffield."/>, 
   <IconBox link="https://www.linkedin.com/in/ben-cannon04" icon={<LinkedInIcon fontSize="inherit"/>}/>,
 
@@ -30,7 +33,7 @@ function HomePage() {
   <IconBox link="https://github.com/Ben-Cannon04" icon={<GitHubIcon fontSize="inherit"/>}/>]
 
   return (
-    <div>
+    <div className={style}>
       {data && <GridLayout boxes={data} lightTheme={enabled} />}
     </div>
   );
