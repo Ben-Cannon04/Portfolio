@@ -6,7 +6,7 @@ function WorkPage() {
   const [enabled] = useOutletContext();
   
   const data =
-        [<SkillsBox title="Yunex Traffic | Software Intern"  
+        [<SkillsBox title="Yunex Traffic"  
           content={"During my internship I worked as part of a fully agile software development team, participating in daily standups, "
     +"planning, show/tell and retrospectives. I have developed application features using JavaScript, Java, and Python,"
     +"and worked on DevOps tasks to improve the CI/CD pipeline. The main support tools used were Jira, GitLab and "

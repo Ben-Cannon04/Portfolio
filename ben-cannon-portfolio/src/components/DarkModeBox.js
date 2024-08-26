@@ -1,7 +1,7 @@
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import useLocalStorage from 'use-local-storage';
 
 
@@ -24,12 +24,7 @@ function DarkModeBox({ enabled, setEnabled }) {
         {enabled ? <DarkModeIcon fontSize="inherit"/> : <LightModeIcon sx={{ color: "yellow" }} fontSize="inherit"/>}
       </div>
     );
-  }
-
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
-  
+  }  
   
   export default DarkModeBox;
   
