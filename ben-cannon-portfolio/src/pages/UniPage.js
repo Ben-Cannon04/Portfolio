@@ -1,42 +1,61 @@
 import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
+import ComboBox from "../components/ComboBox";
 import GridLayout from "../components/GridLayout";
 import SkillsBox from "../components/SkillsBox";
 
-function UniPage() {
+function ExtraCurricular() {
   const [enabled] = useOutletContext();
+  const [selectedYear, setSelectedYear] = useState("1");
 
-  const firstYearData = 
-  [
-    <SkillsBox skills={["Ruby", "Git", "Agile Methodology"]} title={"Introduction to Software Engineering"}/>,
-    <SkillsBox title={"Foundations of Computer Science"}/>,
-    <SkillsBox skills={["Java", "Object Object Oriented Programming"]} title={"Java Programming"}/>,
-    <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"}/>,
-    <SkillsBox title={"Devices and Networks"}/>,
-    <SkillsBox skills={["HTML", "CSS", "javaScript"]} title={"Web and Internet Technology"}/>,
-    <SkillsBox title={"Introduction to Algorithms and Data Structures"}/>,
-    <SkillsBox skills={["Team Work", "Presenting"]} title={"Gloabl Engineering Challenge Week"}/>,
-  ]
+  const yearOptions = ["Year 1", "Year 2", "Year in Industry", "Year 3"];
 
-  const seconfYearData = 
-  [
-    <SkillsBox skills={["python", "SciPy", "Numpy"]} title={"Data Driven Computing"}/>,
-    <SkillsBox skills={["Java", "UML Diagrams"]} title={"System Design and Security"}/>,
-    <SkillsBox skills={["Python", "ROS"]} title={"Robotics"}/>,
-    <SkillsBox title={"Logic in Computer Science"}/>,
-    <SkillsBox skills={["Haskell"]} title={"Functional Programming"}/>,
-    <SkillsBox title={"Automata, Computation and Complexity"}/>,
-    <SkillsBox skills={["React", "React-router", "Agile Methodology"]} title={"Software Hut"}/>,
-    <SkillsBox skills={["Team work", "Presenting"]} title={"Engineering - You're Hired"}/>,
-
-  ]
-
-  const data = firstYearData.concat(seconfYearData)
+  const modulesByYear = {
+    "Year 1": [
+      <SkillsBox 
+      skills={["Ruby", "Git", "Agile Methodology"]} 
+      title={"Introduction to Software Engineering"}
+      content={"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa"}/>,
+      <SkillsBox title={"Foundations of Computer Science"}/>,
+      <SkillsBox skills={["Java", "Object Object Oriented Programming"]} title={"Java Programming"}/>,
+      <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"}/>,
+      <SkillsBox title={"Devices and Networks"}/>,
+      <SkillsBox skills={["HTML", "CSS", "javaScript"]} title={"Web and Internet Technology"}/>,
+      <SkillsBox title={"Introduction to Algorithms and Data Structures"}/>,
+      <SkillsBox skills={["Team Work", "Presenting"]} title={"Gloabl Engineering Challenge Week"}/>,
+    ],
+    "Year 2": [
+      <SkillsBox skills={["python", "SciPy", "Numpy"]} title={"Data Driven Computing"}/>,
+      <SkillsBox skills={["Java", "UML Diagrams"]} title={"System Design and Security"}/>,
+      <SkillsBox skills={["Python", "ROS"]} title={"Robotics"}/>,
+      <SkillsBox title={"Logic in Computer Science"}/>,
+      <SkillsBox skills={["Haskell"]} title={"Functional Programming"}/>,
+      <SkillsBox title={"Automata, Computation and Complexity"}/>,
+      <SkillsBox skills={["React", "React-router", "Agile Methodology"]} title={"Software Hut"}/>,
+      <SkillsBox skills={["Team work", "Presenting"]} title={"Engineering - You're Hired"}/>,
+      ],
+  };
 
   return (
-      <div>
-        {data && <GridLayout boxes={data} lightTheme={enabled} horizontalBoxes={[0,1,2,3,4,5,6,7]} verticalBoxes={[]} />}
+    <div className="min-h-screen py-8 px-4">
+      <div className="max-w-xl mx-auto mb-8">
+        <ComboBox
+          title="Select University Year"
+          options={yearOptions}
+          lightTheme={enabled}
+          onChange={(e) => setSelectedYear(e.target.value)}
+          value={selectedYear}
+        />
       </div>
+
+      <GridLayout
+        boxes={modulesByYear[selectedYear] || []}
+        lightTheme={enabled}
+        horizontalBoxes={modulesByYear[selectedYear]?.map((_, i) => i) || []}
+        verticalBoxes={[]}
+      />
+    </div>
   );
 }
 
-export default UniPage;
+export default ExtraCurricular;
