@@ -6,7 +6,7 @@ import SkillsBox from "../components/SkillsBox";
 
 function ExtraCurricular() {
   const [enabled] = useOutletContext();
-  const [selectedYear, setSelectedYear] = useState("1");
+  const [selectedYear, setSelectedYear] = useState("Year 1");
 
   const yearOptions = ["Year 1", "Year 2", "Year in Industry", "Year 3"];
 
