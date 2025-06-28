@@ -8,7 +8,6 @@ function NavBar() {
                     <li><Link to="/Portfolio/"><h2>Home</h2></Link></li>
                     <li><Link to="/Portfolio/work">Work</Link></li>
                     <li><Link to="/Portfolio/uni">University</Link></li>
-                    <li><Link to="/Portfolio/extracurricular">Extracurricular</Link></li>
                     <li><Link to="/Portfolio/projects">Projects</Link></li>
                 </ul>
             </div>
