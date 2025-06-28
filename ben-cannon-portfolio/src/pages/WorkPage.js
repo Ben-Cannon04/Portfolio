@@ -15,7 +15,7 @@ function WorkPage() {
     +"and communicating within a professional team environment." } skills={["Java", "Python", "FFmpeg", "Jira rest api", "JavaScript"]}/>]
   
   return (<div>
-        {data && <GridLayout boxes={data} lightTheme={enabled} horizontalBoxes={[0,1,2,3,4,5,6,7]} verticalBoxes={[]} />}
+        {data && <GridLayout boxes={data} lightTheme={enabled} horizontalBoxes={[1,2,3,4,5,6,7]} verticalBoxes={[0]} />}
       </div>)
 }
 

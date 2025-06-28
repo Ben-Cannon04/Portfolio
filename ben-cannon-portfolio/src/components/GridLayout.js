@@ -17,7 +17,7 @@ function GridLayout({ boxes, lightTheme, horizontalBoxes, verticalBoxes }) {
           key={i}
           className={`${style}
             ${horizontalBoxes.includes(i) ? 'md:col-span-2' : ''}
-            ${verticalBoxes.includes(i) ? 'md:row-span-2' : ''} `}
+            ${verticalBoxes.includes(i) ? 'row-span-2' : ''} `}
         >
           {boxes[i]}
         </div>
