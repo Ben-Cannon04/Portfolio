@@ -1,19 +1,19 @@
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-import { useEffect } from "react";
-import useLocalStorage from "use-local-storage";
+import { useEffect } from 'react';
+import useLocalStorage from 'use-local-storage';
 
 function DarkModeBox({ enabled, setEnabled }) {
-  const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
-    document.body.classList.remove("light", "dark");
+    document.body.classList.remove('light', 'dark');
     document.body.classList.add(theme);
   }, [theme]);
 
-  const handleThemeChange = (enabled) => {
-    setTheme(enabled ? "light" : "dark");
+  const handleThemeChange = enabled => {
+    setTheme(enabled ? 'light' : 'dark');
     setEnabled(enabled);
   };
 
@@ -25,7 +25,7 @@ function DarkModeBox({ enabled, setEnabled }) {
       {enabled ? (
         <DarkModeIcon fontSize="inherit" />
       ) : (
-        <LightModeIcon sx={{ color: "yellow" }} fontSize="inherit" />
+        <LightModeIcon sx={{ color: 'yellow' }} fontSize="inherit" />
       )}
     </div>
   );
