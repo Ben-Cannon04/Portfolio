@@ -1,4 +1,11 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+DescriptionBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  link: PropTypes.string,
+};
 
 function DescriptionBox({ title, content, link }) {
   return (

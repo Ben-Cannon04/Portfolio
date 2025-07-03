@@ -7,6 +7,7 @@ function WorkPage() {
 
   const data = [
     <SkillsBox
+    key={0}
       title="Yunex Traffic"
       content={
         "During my internship I worked as part of a fully agile software development team, participating in daily standups, " +

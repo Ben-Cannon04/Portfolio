@@ -1,3 +1,11 @@
+import PropTypes from "prop-types";
+
+SkillsBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string),
+};
+
 function SkillsBox({ title, content, skills }) {
   return (
     <div className="text-pretty">

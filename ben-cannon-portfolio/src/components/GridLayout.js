@@ -1,3 +1,12 @@
+import PropTypes from 'prop-types';
+
+GridLayout.propTypes = {
+  boxes: PropTypes.arrayOf(PropTypes.node).isRequired,
+  lightTheme: PropTypes.bool,
+  horizontalBoxes: PropTypes.arrayOf(PropTypes.number),
+  verticalBoxes: PropTypes.arrayOf(PropTypes.number),
+};
+
 function GridLayout({ boxes, lightTheme, horizontalBoxes, verticalBoxes }) {
   if (!horizontalBoxes) {
     horizontalBoxes = [0, 4, 5];

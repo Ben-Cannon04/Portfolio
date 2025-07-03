@@ -1,3 +1,13 @@
+import PropTypes from 'prop-types';
+
+ComboBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  lightTheme: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.any,
+};
+
 function ComboBox({ title, options, lightTheme, onChange, value }) {
   return (
     <div className="w-full">

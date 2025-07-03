@@ -3,6 +3,12 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 import { useEffect } from "react";
 import useLocalStorage from "use-local-storage";
+import PropTypes from "prop-types";
+
+DarkModeBox.propTypes = {
+  enabled: PropTypes.bool.isRequired,
+  setEnabled: PropTypes.func.isRequired,
+};
 
 function DarkModeBox({ enabled, setEnabled }) {
   const [theme, setTheme] = useLocalStorage("theme", "light");

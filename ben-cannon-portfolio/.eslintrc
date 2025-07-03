@@ -1,17 +1,28 @@
 {
   "env": {
+    "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
     ],
   "parserOptions": {
-    "ecmaVersion": 2020
-  },
+    "sourceType": "module",
+    "ecmaVersion": 2023,
+    "ecmaFeatures": {
+      "jsx": true
+    }},
   "rules": {
-    "no-console": "error"
-  }
+    "no-console": "error",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
 }
