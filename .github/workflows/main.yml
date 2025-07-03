@@ -26,3 +26,7 @@ jobs:
       - name: Run Prettier
         run: npx prettier --check .
         working-directory: ben-cannon-portfolio/src
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx
+        working-directory: ben-cannon-portfolio/src
