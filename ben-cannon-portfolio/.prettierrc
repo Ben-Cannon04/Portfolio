@@ -1,7 +1,4 @@
 {
-  "name": "portfolio-prettier-config",
-  "description": "Prettier configuration for portfolio project",
-  "prettier_config": {
     "semi": true,
     "trailingComma": "es5",
     "singleQuote": true,
@@ -20,5 +17,5 @@
     "quoteProps": "as-needed",
     "requirePragma": false,
     "vueIndentScriptAndStyle": false
-  }
+  
 }

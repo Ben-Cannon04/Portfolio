@@ -1,60 +1,60 @@
-import { useOutletContext } from "react-router-dom";
-import { useState } from "react";
-import ComboBox from "../components/ComboBox";
-import GridLayout from "../components/GridLayout";
-import SkillsBox from "../components/SkillsBox";
+import { useOutletContext } from 'react-router-dom';
+import { useState } from 'react';
+import ComboBox from '../components/ComboBox';
+import GridLayout from '../components/GridLayout';
+import SkillsBox from '../components/SkillsBox';
 
 function ExtraCurricular() {
   const [enabled] = useOutletContext();
-  const [selectedYear, setSelectedYear] = useState("Year 1");
+  const [selectedYear, setSelectedYear] = useState('Year 1');
 
-  const yearOptions = ["Year 1", "Year 2", "Year in Industry", "Year 3"];
+  const yearOptions = ['Year 1', 'Year 2', 'Year in Industry', 'Year 3'];
 
   const modulesByYear = {
-    "Year 1": [
+    'Year 1': [
       <SkillsBox
-        skills={["Ruby", "Git", "Agile Methodology"]}
-        title={"Introduction to Software Engineering"}
+        skills={['Ruby', 'Git', 'Agile Methodology']}
+        title={'Introduction to Software Engineering'}
         content={
-          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa"
+          'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa'
         }
       />,
-      <SkillsBox title={"Foundations of Computer Science"} />,
+      <SkillsBox title={'Foundations of Computer Science'} />,
       <SkillsBox
-        skills={["Java", "Object Object Oriented Programming"]}
-        title={"Java Programming"}
+        skills={['Java', 'Object Object Oriented Programming']}
+        title={'Java Programming'}
       />,
-      <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"} />,
-      <SkillsBox title={"Devices and Networks"} />,
+      <SkillsBox skills={['Miro Code']} title={'Machines and Intelligence'} />,
+      <SkillsBox title={'Devices and Networks'} />,
       <SkillsBox
-        skills={["HTML", "CSS", "javaScript"]}
-        title={"Web and Internet Technology"}
+        skills={['HTML', 'CSS', 'javaScript']}
+        title={'Web and Internet Technology'}
       />,
-      <SkillsBox title={"Introduction to Algorithms and Data Structures"} />,
+      <SkillsBox title={'Introduction to Algorithms and Data Structures'} />,
       <SkillsBox
-        skills={["Team Work", "Presenting"]}
-        title={"Gloabl Engineering Challenge Week"}
+        skills={['Team Work', 'Presenting']}
+        title={'Gloabl Engineering Challenge Week'}
       />,
     ],
-    "Year 2": [
+    'Year 2': [
       <SkillsBox
-        skills={["python", "SciPy", "Numpy"]}
-        title={"Data Driven Computing"}
+        skills={['python', 'SciPy', 'Numpy']}
+        title={'Data Driven Computing'}
       />,
       <SkillsBox
-        skills={["Java", "UML Diagrams"]}
-        title={"System Design and Security"}
+        skills={['Java', 'UML Diagrams']}
+        title={'System Design and Security'}
       />,
-      <SkillsBox skills={["Python", "ROS"]} title={"Robotics"} />,
-      <SkillsBox title={"Logic in Computer Science"} />,
-      <SkillsBox skills={["Haskell"]} title={"Functional Programming"} />,
-      <SkillsBox title={"Automata, Computation and Complexity"} />,
+      <SkillsBox skills={['Python', 'ROS']} title={'Robotics'} />,
+      <SkillsBox title={'Logic in Computer Science'} />,
+      <SkillsBox skills={['Haskell']} title={'Functional Programming'} />,
+      <SkillsBox title={'Automata, Computation and Complexity'} />,
       <SkillsBox
-        skills={["React", "React-router", "Agile Methodology"]}
-        title={"Software Hut"}
+        skills={['React', 'React-router', 'Agile Methodology']}
+        title={'Software Hut'}
       />,
       <SkillsBox
-        skills={["Team work", "Presenting"]}
+        skills={['Team work', 'Presenting']}
         title={"Engineering - You're Hired"}
       />,
     ],
@@ -67,7 +67,7 @@ function ExtraCurricular() {
           title="Select University Year"
           options={yearOptions}
           lightTheme={enabled}
-          onChange={(e) => setSelectedYear(e.target.value)}
+          onChange={e => setSelectedYear(e.target.value)}
           value={selectedYear}
         />
       </div>
