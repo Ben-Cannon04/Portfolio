@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 IconBox.propTypes = {
   icon: PropTypes.node.isRequired,

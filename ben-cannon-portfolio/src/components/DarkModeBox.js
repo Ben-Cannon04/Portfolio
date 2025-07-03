@@ -1,9 +1,9 @@
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-import { useEffect } from "react";
-import useLocalStorage from "use-local-storage";
-import PropTypes from "prop-types";
+import { useEffect } from 'react';
+import useLocalStorage from 'use-local-storage';
+import PropTypes from 'prop-types';
 
 DarkModeBox.propTypes = {
   enabled: PropTypes.bool.isRequired,

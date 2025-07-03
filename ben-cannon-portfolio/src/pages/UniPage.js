@@ -20,44 +20,55 @@ function ExtraCurricular() {
         }
         key={0}
       />,
-      <SkillsBox title={"Foundations of Computer Science"} key={1}/>,
+      <SkillsBox title={'Foundations of Computer Science'} key={1} />,
       <SkillsBox
-        skills={["Java", "Object Object Oriented Programming"]}
-        title={"Java Programming"}
+        skills={['Java', 'Object Object Oriented Programming']}
+        title={'Java Programming'}
         key={2}
       />,
-      <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"} key={3}/>,
-      <SkillsBox title={"Devices and Networks"} key={4}/>,
       <SkillsBox
-        skills={["HTML", "CSS", "javaScript"]}
-        title={"Web and Internet Technology"}
+        skills={['Miro Code']}
+        title={'Machines and Intelligence'}
+        key={3}
+      />,
+      <SkillsBox title={'Devices and Networks'} key={4} />,
+      <SkillsBox
+        skills={['HTML', 'CSS', 'javaScript']}
+        title={'Web and Internet Technology'}
         key={5}
       />,
-      <SkillsBox title={"Introduction to Algorithms and Data Structures"} key={6}/>,
       <SkillsBox
-        skills={["Team Work", "Presenting"]}
-        title={"Gloabl Engineering Challenge Week"}
+        title={'Introduction to Algorithms and Data Structures'}
+        key={6}
+      />,
+      <SkillsBox
+        skills={['Team Work', 'Presenting']}
+        title={'Gloabl Engineering Challenge Week'}
         key={7}
       />,
     ],
     'Year 2': [
       <SkillsBox
-        skills={["python", "SciPy", "Numpy"]}
-        title={"Data Driven Computing"}
+        skills={['python', 'SciPy', 'Numpy']}
+        title={'Data Driven Computing'}
         key={8}
       />,
       <SkillsBox
-        skills={["Java", "UML Diagrams"]}
-        title={"System Design and Security"}
+        skills={['Java', 'UML Diagrams']}
+        title={'System Design and Security'}
         key={9}
       />,
-      <SkillsBox skills={["Python", "ROS"]} title={"Robotics"} key={10}/>,
-      <SkillsBox title={"Logic in Computer Science"} key={0}/>,
-      <SkillsBox skills={["Haskell"]} title={"Functional Programming"} key={11}/>,
-      <SkillsBox title={"Automata, Computation and Complexity"} key={12}/>,
+      <SkillsBox skills={['Python', 'ROS']} title={'Robotics'} key={10} />,
+      <SkillsBox title={'Logic in Computer Science'} key={0} />,
       <SkillsBox
-        skills={["React", "React-router", "Agile Methodology"]}
-        title={"Software Hut"}
+        skills={['Haskell']}
+        title={'Functional Programming'}
+        key={11}
+      />,
+      <SkillsBox title={'Automata, Computation and Complexity'} key={12} />,
+      <SkillsBox
+        skills={['React', 'React-router', 'Agile Methodology']}
+        title={'Software Hut'}
         key={13}
       />,
       <SkillsBox

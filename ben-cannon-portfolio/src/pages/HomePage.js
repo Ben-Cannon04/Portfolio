@@ -18,7 +18,7 @@ function HomePage() {
     />,
     <IconBox
       link="https://www.linkedin.com/in/ben-cannon04"
-      icon={<LinkedInIcon fontSize="inherit"/>}
+      icon={<LinkedInIcon fontSize="inherit" />}
       key={1}
     />,
 
@@ -32,7 +32,7 @@ function HomePage() {
       key={2}
     />,
 
-    <DarkModeBox enabled={enabled} setEnabled={setEnabled} key={0}/>,
+    <DarkModeBox enabled={enabled} setEnabled={setEnabled} key={0} />,
     <DescriptionBox
       title="extracurricular"
       content={
@@ -51,7 +51,12 @@ function HomePage() {
       link="/Portfolio/uni"
       key={4}
     />,
-    <DescriptionBox title="projects" content={""} link="/Portfolio/projects" key={5}/>,
+    <DescriptionBox
+      title="projects"
+      content={''}
+      link="/Portfolio/projects"
+      key={5}
+    />,
     <IconBox
       link="https://github.com/Ben-Cannon04"
       icon={<GitHubIcon fontSize="inherit" />}
