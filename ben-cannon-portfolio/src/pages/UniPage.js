@@ -1,22 +1,22 @@
-import { useOutletContext } from "react-router-dom";
-import { useState } from "react";
-import ComboBox from "../components/ComboBox";
-import GridLayout from "../components/GridLayout";
-import SkillsBox from "../components/SkillsBox";
+import { useOutletContext } from 'react-router-dom';
+import { useState } from 'react';
+import ComboBox from '../components/ComboBox';
+import GridLayout from '../components/GridLayout';
+import SkillsBox from '../components/SkillsBox';
 
 function ExtraCurricular() {
   const [enabled] = useOutletContext();
-  const [selectedYear, setSelectedYear] = useState("Year 1");
+  const [selectedYear, setSelectedYear] = useState('Year 1');
 
-  const yearOptions = ["Year 1", "Year 2", "Year in Industry", "Year 3"];
+  const yearOptions = ['Year 1', 'Year 2', 'Year in Industry', 'Year 3'];
 
   const modulesByYear = {
-    "Year 1": [
+    'Year 1': [
       <SkillsBox
-        skills={["Ruby", "Git", "Agile Methodology"]}
-        title={"Introduction to Software Engineering"}
+        skills={['Ruby', 'Git', 'Agile Methodology']}
+        title={'Introduction to Software Engineering'}
         content={
-          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa"
+          'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa'
         }
         key={0}
       />,
@@ -40,7 +40,7 @@ function ExtraCurricular() {
         key={7}
       />,
     ],
-    "Year 2": [
+    'Year 2': [
       <SkillsBox
         skills={["python", "SciPy", "Numpy"]}
         title={"Data Driven Computing"}
@@ -61,7 +61,7 @@ function ExtraCurricular() {
         key={13}
       />,
       <SkillsBox
-        skills={["Team work", "Presenting"]}
+        skills={['Team work', 'Presenting']}
         title={"Engineering - You're Hired"}
         key={14}
       />,
@@ -75,7 +75,7 @@ function ExtraCurricular() {
           title="Select University Year"
           options={yearOptions}
           lightTheme={enabled}
-          onChange={(e) => setSelectedYear(e.target.value)}
+          onChange={e => setSelectedYear(e.target.value)}
           value={selectedYear}
         />
       </div>

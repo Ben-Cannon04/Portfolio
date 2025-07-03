@@ -1,15 +1,15 @@
-import { useOutletContext } from "react-router-dom";
-import SkillsBox from "../components/SkillsBox";
-import GridLayout from "../components/GridLayout";
+import { useOutletContext } from 'react-router-dom';
+import SkillsBox from '../components/SkillsBox';
+import GridLayout from '../components/GridLayout';
 
 function ProjectsPage() {
   const [enabled] = useOutletContext();
 
   const data = [
     <SkillsBox
-      title={"Portfolio"}
+      title={'Portfolio'}
       content={
-        "Website hosted through Github pages. Using the libarys: React Router,gh-pages, UseLocalStorage, Material Icon UI"
+        'Website hosted through Github pages. Using the libarys: React Router,gh-pages, UseLocalStorage, Material Icon UI'
       }
       skills={["react js", "Tailwind css", "Github pages"]}
       key={0}

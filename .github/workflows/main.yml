@@ -25,4 +25,4 @@ jobs:
 
       - name: Run Prettier
         run: npx prettier --check .
-        working-directory: ben-cannon-portfolio
+        working-directory: ben-cannon-portfolio/src
