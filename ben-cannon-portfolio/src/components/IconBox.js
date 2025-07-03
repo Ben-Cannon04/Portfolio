@@ -1,3 +1,10 @@
+import PropTypes from 'prop-types';
+
+IconBox.propTypes = {
+  icon: PropTypes.node.isRequired,
+  link: PropTypes.string,
+};
+
 function IconBox({ icon, link }) {
   return (
     <div

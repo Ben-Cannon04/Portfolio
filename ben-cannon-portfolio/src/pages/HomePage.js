@@ -14,10 +14,12 @@ function HomePage() {
     <DescriptionBox
       title="about me."
       content="Hi my name is Ben Cannon. I'm a Computer Science student at the University of Sheffield."
+      key={0}
     />,
     <IconBox
       link="https://www.linkedin.com/in/ben-cannon04"
       icon={<LinkedInIcon fontSize="inherit" />}
+      key={1}
     />,
 
     <DescriptionBox
@@ -27,9 +29,10 @@ function HomePage() {
         "use python, javascript and java. I'm starting my role as junior developer at Certara on June 10th."
       }
       link="/Portfolio/work"
+      key={2}
     />,
 
-    <DarkModeBox enabled={enabled} setEnabled={setEnabled} />,
+    <DarkModeBox enabled={enabled} setEnabled={setEnabled} key={0} />,
     <DescriptionBox
       title="extracurricular"
       content={
@@ -37,6 +40,7 @@ function HomePage() {
         ' I have also been the treasurer of the Game Development Society at the University of Sheffield'
       }
       link="/Portfolio/extracurricular"
+      key={3}
     />,
     <DescriptionBox
       title="university"
@@ -45,11 +49,18 @@ function HomePage() {
         ' During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability.'
       }
       link="/Portfolio/uni"
+      key={4}
     />,
-    <DescriptionBox title="projects" content={''} link="/Portfolio/projects" />,
+    <DescriptionBox
+      title="projects"
+      content={''}
+      link="/Portfolio/projects"
+      key={5}
+    />,
     <IconBox
       link="https://github.com/Ben-Cannon04"
       icon={<GitHubIcon fontSize="inherit" />}
+      key={6}
     />,
   ];
 

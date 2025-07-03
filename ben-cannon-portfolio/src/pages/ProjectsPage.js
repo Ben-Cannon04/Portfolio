@@ -12,8 +12,9 @@ function ProjectsPage() {
         'Website hosted through Github pages. Using the libarys: React Router,gh-pages, UseLocalStorage, Material Icon UI'
       }
       skills={['react js', 'Tailwind css', 'Github pages']}
+      key={0}
     />,
-    <SkillsBox title={'Sheffjam 9'} />,
+    <SkillsBox title={'Sheffjam 9'} key={1} />,
   ];
 
   return (
