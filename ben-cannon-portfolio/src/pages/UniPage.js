@@ -12,28 +12,52 @@ function ExtraCurricular() {
 
   const modulesByYear = {
     "Year 1": [
-      <SkillsBox 
-      skills={["Ruby", "Git", "Agile Methodology"]} 
-      title={"Introduction to Software Engineering"}
-      content={"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa"}/>,
-      <SkillsBox title={"Foundations of Computer Science"}/>,
-      <SkillsBox skills={["Java", "Object Object Oriented Programming"]} title={"Java Programming"}/>,
-      <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"}/>,
-      <SkillsBox title={"Devices and Networks"}/>,
-      <SkillsBox skills={["HTML", "CSS", "javaScript"]} title={"Web and Internet Technology"}/>,
-      <SkillsBox title={"Introduction to Algorithms and Data Structures"}/>,
-      <SkillsBox skills={["Team Work", "Presenting"]} title={"Gloabl Engineering Challenge Week"}/>,
+      <SkillsBox
+        skills={["Ruby", "Git", "Agile Methodology"]}
+        title={"Introduction to Software Engineering"}
+        content={
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      />,
+      <SkillsBox title={"Foundations of Computer Science"} />,
+      <SkillsBox
+        skills={["Java", "Object Object Oriented Programming"]}
+        title={"Java Programming"}
+      />,
+      <SkillsBox skills={["Miro Code"]} title={"Machines and Intelligence"} />,
+      <SkillsBox title={"Devices and Networks"} />,
+      <SkillsBox
+        skills={["HTML", "CSS", "javaScript"]}
+        title={"Web and Internet Technology"}
+      />,
+      <SkillsBox title={"Introduction to Algorithms and Data Structures"} />,
+      <SkillsBox
+        skills={["Team Work", "Presenting"]}
+        title={"Gloabl Engineering Challenge Week"}
+      />,
     ],
     "Year 2": [
-      <SkillsBox skills={["python", "SciPy", "Numpy"]} title={"Data Driven Computing"}/>,
-      <SkillsBox skills={["Java", "UML Diagrams"]} title={"System Design and Security"}/>,
-      <SkillsBox skills={["Python", "ROS"]} title={"Robotics"}/>,
-      <SkillsBox title={"Logic in Computer Science"}/>,
-      <SkillsBox skills={["Haskell"]} title={"Functional Programming"}/>,
-      <SkillsBox title={"Automata, Computation and Complexity"}/>,
-      <SkillsBox skills={["React", "React-router", "Agile Methodology"]} title={"Software Hut"}/>,
-      <SkillsBox skills={["Team work", "Presenting"]} title={"Engineering - You're Hired"}/>,
-      ],
+      <SkillsBox
+        skills={["python", "SciPy", "Numpy"]}
+        title={"Data Driven Computing"}
+      />,
+      <SkillsBox
+        skills={["Java", "UML Diagrams"]}
+        title={"System Design and Security"}
+      />,
+      <SkillsBox skills={["Python", "ROS"]} title={"Robotics"} />,
+      <SkillsBox title={"Logic in Computer Science"} />,
+      <SkillsBox skills={["Haskell"]} title={"Functional Programming"} />,
+      <SkillsBox title={"Automata, Computation and Complexity"} />,
+      <SkillsBox
+        skills={["React", "React-router", "Agile Methodology"]}
+        title={"Software Hut"}
+      />,
+      <SkillsBox
+        skills={["Team work", "Presenting"]}
+        title={"Engineering - You're Hired"}
+      />,
+    ],
   };
 
   return (
