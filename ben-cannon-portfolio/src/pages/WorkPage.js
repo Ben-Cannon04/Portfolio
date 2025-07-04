@@ -1,31 +1,26 @@
 import { useOutletContext } from 'react-router-dom';
-import SkillsBox from '../components/SkillsBox';
 import GridLayout from '../components/GridLayout';
+import {
+  renderComponent,
+  useComponentData,
+} from '../services/JsonToComponentConverterService';
 
 function WorkPage() {
   const [enabled] = useOutletContext();
 
-  const data = [
-    <SkillsBox
-      key={0}
-      title="Yunex Traffic"
-      content={
-        'During my internship I worked as part of a fully agile software development team, participating in daily standups, ' +
-        'planning, show/tell and retrospectives. I have developed application features using JavaScript, Java, and Python,' +
-        'and worked on DevOps tasks to improve the CI/CD pipeline. The main support tools used were Jira, GitLab and ' +
-        'Confluence. As well as improving my development skills directly, I have learnt a great deal working with Senior ' +
-        'Developers through for example code reviews. The internship has also given me significant experience working ' +
-        'and communicating within a professional team environment.'
-      }
-      skills={['Java', 'Python', 'FFmpeg', 'Jira rest api', 'JavaScript']}
-    />,
-  ];
+  const { data, loading, error } = useComponentData('work-data');
 
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+
+  const boxes = data?.boxes.map((boxData, index) =>
+    renderComponent(boxData, index, { enabled })
+  );
   return (
     <div>
       {data && (
         <GridLayout
-          boxes={data}
+          boxes={boxes}
           lightTheme={enabled}
           horizontalBoxes={[1, 2, 3, 4, 5, 6, 7]}
           verticalBoxes={[0]}

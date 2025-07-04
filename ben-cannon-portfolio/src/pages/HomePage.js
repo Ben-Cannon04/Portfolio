@@ -1,70 +1,24 @@
 import { useOutletContext } from 'react-router-dom';
-import DarkModeBox from '../components/DarkModeBox';
-import DescriptionBox from '../components/DescriptionBox';
+import {
+  renderComponent,
+  useComponentData,
+} from '../services/JsonToComponentConverterService';
 import GridLayout from '../components/GridLayout';
-import IconBox from '../components/IconBox';
-
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 
 function HomePage() {
   const [enabled, setEnabled] = useOutletContext();
+  const { data, loading, error } = useComponentData('home-page-data');
 
-  const data = [
-    <DescriptionBox
-      title="about me."
-      content="Hi my name is Ben Cannon. I'm a Computer Science student at the University of Sheffield."
-      key={0}
-    />,
-    <IconBox
-      link="https://www.linkedin.com/in/ben-cannon04"
-      icon={<LinkedInIcon fontSize="inherit" />}
-      key={1}
-    />,
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
 
-    <DescriptionBox
-      title="work experience"
-      content={
-        'I have worked as a software intern at Yunex Traffic, where I was able to ' +
-        "use python, javascript and java. I'm starting my role as junior developer at Certara on June 10th."
-      }
-      link="/Portfolio/work"
-      key={2}
-    />,
+  const boxes = data?.boxes.map((boxData, index) =>
+    renderComponent(boxData, index, { enabled, setEnabled })
+  );
 
-    <DarkModeBox enabled={enabled} setEnabled={setEnabled} key={0} />,
-    <DescriptionBox
-      title="extracurricular"
-      content={
-        'In my spare time I have competed in multiple Hackathons and GameJams.' +
-        ' I have also been the treasurer of the Game Development Society at the University of Sheffield'
-      }
-      link="/Portfolio/extracurricular"
-      key={3}
-    />,
-    <DescriptionBox
-      title="university"
-      content={
-        "I'm currently partaking in my placement year of my computer science degree at the University of Sheffield." +
-        ' During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability.'
-      }
-      link="/Portfolio/uni"
-      key={4}
-    />,
-    <DescriptionBox
-      title="projects"
-      content={''}
-      link="/Portfolio/projects"
-      key={5}
-    />,
-    <IconBox
-      link="https://github.com/Ben-Cannon04"
-      icon={<GitHubIcon fontSize="inherit" />}
-      key={6}
-    />,
-  ];
-
-  return <div>{data && <GridLayout boxes={data} lightTheme={enabled} />}</div>;
+  return (
+    <div>{boxes && <GridLayout boxes={boxes} lightTheme={enabled} />}</div>
+  );
 }
 
 export default HomePage;
