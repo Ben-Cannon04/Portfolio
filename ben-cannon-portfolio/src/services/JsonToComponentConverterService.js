@@ -13,8 +13,6 @@ const iconMap = {
 
 export const renderComponent = (data, index, additionalProps = {}) => {
   if (!data || typeof data !== 'object') {
-    // eslint-disable-next-line no-console
-    console.error('Invalid data passed to renderComponent:', data);
     return null;
   }
 
@@ -74,8 +72,7 @@ export const useComponentData = dataPath => {
     const loadData = async () => {
       try {
         const response = await import(`../data/${dataPath}.json`);
-        // eslint-disable-next-line no-console
-        console.log(response.default);
+
         setData(response.default);
       } catch (err) {
         setError(err);
