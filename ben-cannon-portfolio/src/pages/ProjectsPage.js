@@ -1,27 +1,27 @@
 import { useOutletContext } from 'react-router-dom';
-import SkillsBox from '../components/SkillsBox';
 import GridLayout from '../components/GridLayout';
+import {
+  renderComponent,
+  useComponentData,
+} from '../services/JsonToComponentConverterService';
 
 function ProjectsPage() {
   const [enabled] = useOutletContext();
 
-  const data = [
-    <SkillsBox
-      title={'Portfolio'}
-      content={
-        'Website hosted through Github pages. Using the libarys: React Router,gh-pages, UseLocalStorage, Material Icon UI'
-      }
-      skills={['react js', 'Tailwind css', 'Github pages']}
-      key={0}
-    />,
-    <SkillsBox title={'Sheffjam 9'} key={1} />,
-  ];
+  const { data, loading, error } = useComponentData('work-data');
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+
+  const boxes = data?.boxes.map((boxData, index) =>
+    renderComponent(boxData, index, { enabled })
+  );
 
   return (
     <div>
       {data && (
         <GridLayout
-          boxes={data}
+          boxes={boxes}
           lightTheme={enabled}
           horizontalBoxes={[0, 1]}
           verticalBoxes={[]}
