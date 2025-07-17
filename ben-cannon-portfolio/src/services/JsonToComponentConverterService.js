@@ -2,14 +2,8 @@ import SkillsBox from '../components/SkillsBox';
 import DescriptionBox from '../components/DescriptionBox';
 import IconBox from '../components/IconBox';
 import DarkModeBox from '../components/DarkModeBox';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState, useEffect } from 'react';
-
-const iconMap = {
-  LinkedIn: <LinkedInIcon fontSize="inherit" />,
-  GitHub: <GitHubIcon fontSize="inherit" />,
-};
+import GradientBox from '../components/GradientBox';
 
 export const renderComponent = (data, index, additionalProps = {}) => {
   if (!data || typeof data !== 'object') {
@@ -30,6 +24,20 @@ export const renderComponent = (data, index, additionalProps = {}) => {
         />
       );
 
+    case 'GradientBox':
+      return (
+        <GradientBox
+          {...commonProps}
+          title={data.title}
+          content={data.content}
+          gradientFrom={data.gradientFrom}
+          gradientTo={data.gradientTo}
+          icon={data.icon}
+          link={data.link}
+          key={index}
+        />
+      );
+
     case 'DescriptionBox':
       return (
         <DescriptionBox
@@ -37,6 +45,7 @@ export const renderComponent = (data, index, additionalProps = {}) => {
           title={data.title}
           content={data.content}
           link={data.link}
+          key={index}
         />
       );
 
@@ -45,7 +54,10 @@ export const renderComponent = (data, index, additionalProps = {}) => {
         <IconBox
           {...commonProps}
           link={data.link}
-          icon={iconMap[data.icon] || data.icon}
+          icon={data.icon}
+          gradientFrom={data.gradientFrom}
+          gradientTo={data.gradientTo}
+          key={index}
         />
       );
 
@@ -55,6 +67,7 @@ export const renderComponent = (data, index, additionalProps = {}) => {
           {...commonProps}
           enabled={additionalProps.enabled}
           setEnabled={additionalProps.setEnabled}
+          key={index}
         />
       );
 
