@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { iconMap } from '../constants/IconMap';
 
 IconBox.propTypes = {
   icon: PropTypes.string.isRequired,
@@ -9,15 +8,6 @@ IconBox.propTypes = {
 };
 
 function IconBox({ icon, link, isDarkMode }) {
-  const iconMap = {
-    LinkedIn: (
-      <LinkedInIcon fontSize="inherit" className="w-12 h-12 mx-auto mb-2" />
-    ),
-    GitHub: (
-      <GitHubIcon fontSize="inherit" className="w-12 h-12 mx-auto mb-2" />
-    ),
-  };
-
   const baseClasses =
     'group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl';
 
