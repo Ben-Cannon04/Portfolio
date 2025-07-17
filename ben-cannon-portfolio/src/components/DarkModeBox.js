@@ -19,8 +19,8 @@ function DarkModeBox({ isDarkMode, setIsDarkMode }) {
     <div
       className={`${baseClasses} ${
         isDarkMode
-        ? 'bg-gradient-to-br from-gray-800 to-gray-900 border border-border-dark'
-        :'bg-gradient-to-br from-yellow-400 to-orange-500 border border-border-light'
+          ? 'bg-gradient-to-br from-gray-800 to-gray-900 border border-border-dark'
+          : 'bg-gradient-to-br from-yellow-400 to-orange-500 border border-border-light'
       } text-white cursor-pointer flex items-center justify-center min-h-32`}
       onClick={() => handleThemeChange(!isDarkMode)}
     >

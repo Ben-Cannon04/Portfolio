@@ -13,7 +13,7 @@ module.exports = {
         'secondary-dark': 'gray-300',
         'bg-dark': 'zinc-800',
         'border-dark': 'gray-200',
-},
+      },
     },
   },
   plugins: [],

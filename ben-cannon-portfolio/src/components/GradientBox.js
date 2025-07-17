@@ -17,7 +17,7 @@ function GradientBox({
   icon,
   gradientFrom = 'blue-600',
   gradientTo = 'purple-700',
-  textColour = 'white'
+  textColour = 'white',
 }) {
   const baseClasses =
     'group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl';

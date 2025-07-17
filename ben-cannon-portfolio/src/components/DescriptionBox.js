@@ -43,8 +43,14 @@ function DescriptionBox({ title, content, link, icon, isDarkMode }) {
         {!content && (
           <div className="flex items-center justify-center h-full ">
             <div className="text-center">
-              <InventoryIcon className={`w-12 h-12 mx-auto mb-2 opacity-50 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`} />
-              <p className={`text-sm opacity-70 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}>Empty</p>
+              <InventoryIcon
+                className={`w-12 h-12 mx-auto mb-2 opacity-50 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              />
+              <p
+                className={`text-sm opacity-70 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              >
+                Empty
+              </p>
             </div>
           </div>
         )}
