@@ -23,7 +23,7 @@ function DescriptionBox({ title, content, link, icon, isDarkMode }) {
       to={link}
     >
       <div className="p-4 sm:p-6 h-full flex flex-col">
-        <div className='flex-1'>
+        <div className="flex-1">
           <div className="flex flex-col items-center mb-2 sm:mb-3">
             <div className="flex items-center ml-2 flex-shrink-0">{icon}</div>
             <h3
@@ -42,7 +42,9 @@ function DescriptionBox({ title, content, link, icon, isDarkMode }) {
         </div>
         {!content && (
           <div className="flex items-center justify-center h-full ">
-            <div className={`flex items-center ml-2 flex-shrink-0 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}>
+            <div
+              className={`flex items-center ml-2 flex-shrink-0 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+            >
               <InventoryIcon />
               <p
                 className={`text-xs sm:text-sm text-center ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}

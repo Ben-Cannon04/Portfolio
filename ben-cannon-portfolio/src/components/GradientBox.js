@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { iconMap } from '../constants/IconMap';
 
 GradientBox.propTypes = {
   title: PropTypes.string.isRequired,
@@ -29,15 +30,21 @@ function GradientBox({
       <div className="p-4 sm:p-6 h-full flex flex-col">
         <div className="flex flex-col items-center">
           <div className="flex items-center mb-2 sm:mb-3">
-            <h3 className={`font-bold text-lg text-center`}>{title}</h3>
+            <div>
+              <p>{iconMap[icon]}</p>
+              <h3 className={`font-bold text-lg text-center`}>{title}</h3>
+            </div>
             <div className="flex items-center space-x-2">
-              {icon}
               {link && (
                 <a className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
               )}
             </div>
           </div>
-          {content && <p className={`text-xs sm:text-sm leading-relaxed text-center`}>{content}</p>}
+          {content && (
+            <p className={`text-xs sm:text-sm leading-relaxed text-center`}>
+              {content}
+            </p>
+          )}
         </div>
       </div>
     </div>
