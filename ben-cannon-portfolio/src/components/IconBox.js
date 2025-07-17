@@ -38,9 +38,9 @@ function IconBox({ icon, link, isDarkMode }) {
       return (
         <div
           className={`${baseClasses} ${
-            !isDarkMode
-              ? 'bg-gray-800 text-white border border-gray-700'
-              : 'bg-white text-gray-900 border border-gray-200'
+            isDarkMode
+              ? 'bg-bg-dark text-primary-dark border border-border-dark'
+              : 'bg-bg-light text-primary-light border border-border-light'
           } cursor-pointer flex items-center justify-center min-h-32`}
           onClick={() => link && window.open(link, '_blank')}
         >

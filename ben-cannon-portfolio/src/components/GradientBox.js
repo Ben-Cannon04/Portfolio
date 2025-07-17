@@ -7,6 +7,7 @@ GradientBox.propTypes = {
   icon: PropTypes.node,
   gradientFrom: PropTypes.string,
   gradientTo: PropTypes.string,
+  textColour: PropTypes.string,
 };
 
 function GradientBox({
@@ -16,12 +17,13 @@ function GradientBox({
   icon,
   gradientFrom = 'blue-600',
   gradientTo = 'purple-700',
+  textColour = 'white'
 }) {
   const baseClasses =
     'group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl';
   return (
     <div
-      className={`bg-gradient-to-r from-${gradientFrom} to-${gradientTo} ${baseClasses} col-span-2 text-white `}
+      className={`bg-gradient-to-r from-${gradientFrom} to-${gradientTo} ${baseClasses} col-span-2 text-${textColour} `}
       onClick={() => link && window.open(link, '_blank')}
     >
       <div className="p-6 h-full flex flex-col justify-between">

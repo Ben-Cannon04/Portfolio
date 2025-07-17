@@ -25,7 +25,7 @@ const HomePage = () => {
   return (
     <div
       className={`min-h-screen transition-all duration-300 ${
-        !isDarkMode
+        isDarkMode
           ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900'
           : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
       }`}
@@ -34,13 +34,13 @@ const HomePage = () => {
         <div className="text-center mb-12">
           <h1
             className={`text-5xl font-bold mb-4 ${
-              !isDarkMode ? 'text-white' : 'text-gray-900'
+              isDarkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
             Ben Cannon
           </h1>
           <p
-            className={`text-xl ${!isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
+            className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
           >
             Computer Science Student & Software Engineer
           </p>
@@ -55,7 +55,7 @@ const HomePage = () => {
 
         <div className="text-center mt-16">
           <p
-            className={`text-sm ${!isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}
+            className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}
           >
             © 2025 Ben Cannon. Built with React
           </p>
