@@ -30,24 +30,24 @@ const HomePage = () => {
           : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
       }`}
     >
-      <div className="container mx-auto px-6 py-12">
-        <div className="text-center mb-12">
+      <div className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
           <h1
-            className={`text-5xl font-bold mb-4 ${
-              isDarkMode ? 'text-white' : 'text-gray-900'
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 ${
+              isDarkMode ? 'text-primary-dark' : 'text-primary-light'
             }`}
           >
             Ben Cannon
           </h1>
           <p
-            className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
+            className={`text-base sm:text-lg md:text-xl px-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
           >
             Computer Science Student & Software Engineer
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {homePageData.data.boxes.map((box, index) =>
             renderComponent(box, index, { isDarkMode, setIsDarkMode })
           )}
