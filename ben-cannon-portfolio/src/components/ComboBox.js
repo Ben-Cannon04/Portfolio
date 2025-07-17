@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 ComboBox.propTypes = {
   title: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
-  lightTheme: PropTypes.bool,
+  isDarkMode: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.any,
 };
 
-function ComboBox({ title, options, lightTheme, onChange, value }) {
+function ComboBox({ title, options, isDarkMode, onChange, value }) {
   return (
     <div className="w-full">
       <label
-        className={`block mb-2 font-medium ${lightTheme ? 'text-gray-800' : 'text-gray-200'}`}
+        className={`block mb-2 font-medium ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
       >
         {title}
       </label>
@@ -21,9 +21,9 @@ function ComboBox({ title, options, lightTheme, onChange, value }) {
         onChange={onChange}
         className={`w-full px-4 py-2 rounded-md border shadow-sm focus:outline-none
           ${
-            lightTheme
-              ? 'bg-neutral-100 text-black'
-              : 'bg-zinc-800 text-slate-300'
+            isDarkMode
+              ? 'bg-bg-dark text-primary-dark'
+              : 'bg-bg-light text-primary-light'
           }`}
       >
         {options.map((option, idx) => (
