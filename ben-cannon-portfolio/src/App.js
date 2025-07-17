@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import NavBar from './components/NavBar';
 import { useEffect, useState } from 'react';
 import useLocalStorage from 'use-local-storage';
 
@@ -18,17 +17,16 @@ function App() {
     document.body.classList.add('min-h-screen');
   }, [theme]);
 
-  const [enabled, setEnabled] = useState(theme === 'light');
+  const [isDarkMode, setIsDarkMode] = useState(theme === 'light');
 
   return (
     <>
-      <NavBar />
       <main
         className={
-          'text-center py-2 ' + (enabled ? '' : 'min-h-screen bg-zinc-900')
+          'text-center py-2 ' + (isDarkMode ? '' : 'min-h-screen bg-zinc-900')
         }
       >
-        <Outlet context={[enabled, setEnabled]} />
+        <Outlet context={[isDarkMode, setIsDarkMode]} />
       </main>
     </>
   );
