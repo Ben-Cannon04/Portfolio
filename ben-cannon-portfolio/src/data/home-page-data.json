@@ -36,9 +36,9 @@
     },
     {
       "type": "DescriptionBox",
-      "title": "university",
+      "title": "Education",
       "content": "I'm currently partaking in my placement year of my computer science degree at the University of Sheffield. During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability.",
-      "link": "/Portfolio/uni",
+      "link": "/Portfolio/education",
       "icon": "SchoolIcon"
     },
     {

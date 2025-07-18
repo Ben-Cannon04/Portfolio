@@ -7,7 +7,7 @@ import {
 } from '../services/JsonToComponentConverterService';
 import { useState } from 'react';
 
-function UniPage() {
+function EducationPage() {
   const [enabled] = useOutletContext();
 
   const { data, loading, error } = useComponentData('uni-data');
@@ -45,4 +45,4 @@ function UniPage() {
   );
 }
 
-export default UniPage;
+export default EducationPage;

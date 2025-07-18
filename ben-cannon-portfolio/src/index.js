@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import WorkPage from './pages/WorkPage';
 import HomePage from './pages/HomePage';
-import UniPage from './pages/UniPage';
+import EducationPage from './pages/EducationPage';
 import ProjectsPage from './pages/ProjectsPage';
 
 const router = createBrowserRouter([
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <WorkPage />,
       },
       {
-        path: '/Portfolio/uni',
-        element: <UniPage />,
+        path: '/Portfolio/education',
+        element: <EducationPage />,
       },
       {
         path: '/Portfolio/projects',
