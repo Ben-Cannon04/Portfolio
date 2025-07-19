@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
+import Skill from './Skill';
 
 LargeBox.propTypes = {
   title: PropTypes.string.isRequired,
@@ -20,7 +21,6 @@ function LargeBox({
   subtitle,
   timePeriod,
   description,
-  icon,
   grade,
   skills,
   child,
@@ -28,15 +28,13 @@ function LargeBox({
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className={`relative mb-8 sm:mb-12 ml-16 sm:ml-20 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}>
-      <div
-        className={`absolute -left-12 sm:-left-16 w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg`}
-      >
-        {icon}
-      </div>
+    <div
+      className={`relative mb-8 sm:mb-12 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}
+    >
+      
 
       <div
-        className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
+        className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
       >
         <div
           className={`p-6 ${child ? 'cursor-pointer' : ''}`}
@@ -82,12 +80,7 @@ function LargeBox({
             </h4>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, id) => (
-                <span
-                  key={id}
-                  className="bg-blue-50 text-blue-700 px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm"
-                >
-                  {skill}
-                </span>
+                <Skill key={id} text={skill} />
               ))}
             </div>
           </div>
@@ -106,9 +99,15 @@ function LargeBox({
               </span>
             </div>
           </div>
-
-          {isExpanded && child}
         </div>
+        {isExpanded && (
+          <div className="border-t border-gray-200 mt-2 p-4 sm:p-6 bg-gray-50 w-full rounded-b-xl sm:rounded-b-2xl">
+            <h4 className="text-lg font-semibold text-gray-800 mb-4">
+              Modules
+            </h4>
+            <div className="space-y-4">{child}</div>
+          </div>
+        )}
       </div>
     </div>
   );
