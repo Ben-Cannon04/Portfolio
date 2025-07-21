@@ -89,25 +89,28 @@ function LargeBox({
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div className="flex items-center">
-              <span
-                className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
-              >
-                Grade:
-              </span>
-              <span
-                className={`font-semibold px-3 py-1 rounded-lg text-sm ${
-                  grade === 'In Progress'
-                    ? 'bg-bg-warning text-text-warning'
-                    : 'bg-bg-success text-text-success'
-                }`}
-              >
-                {grade}
-              </span>
+          {grade && (
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="flex items-center">
+                <span
+                  className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
+                >
+                  Grade:
+                </span>
+                <span
+                  className={`font-semibold px-3 py-1 rounded-lg text-sm ${
+                    grade === 'In Progress'
+                      ? 'bg-bg-warning text-text-warning'
+                      : 'bg-bg-success text-text-success'
+                  }`}
+                >
+                  {grade}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
+
         {isExpanded && (
           <div
             className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-slate-800' : 'bg-gray-50'} w-full rounded-b-xl sm:rounded-b-2xl`}
