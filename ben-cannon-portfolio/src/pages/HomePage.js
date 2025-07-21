@@ -11,14 +11,18 @@ const HomePage = () => {
   if (homePageData.loading)
     return (
       <div>
-        <h1>Loading...</h1>
+        <h1 className={isDarkMode ? 'text-primary-dark' : 'text-primary-light'}>
+          Loading...
+        </h1>
       </div>
     );
 
   if (homePageData.error)
     return (
       <div>
-        <h1>Error!</h1>
+        <h1 className={isDarkMode ? 'text-primary-dark' : 'text-primary-light'}>
+          Error!
+        </h1>
       </div>
     );
 
