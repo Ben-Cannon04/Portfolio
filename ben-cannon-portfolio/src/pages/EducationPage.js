@@ -33,30 +33,32 @@ function EducationPage() {
               grade="A*AA"
               timePeriod="2020-2022"
               icon={<SchoolIcon />}
-              child={
-                <>
-                  <SkillsBox
-                    title="Computer Science"
-                    content="Provided the foundational knowledge of Computer Science"
-                    skills={['C#', 'Unity', ' Algorithms and Data Structures']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Mathematics"
-                    content="Maths stuff"
-                    skills={['Calculus', 'Squares']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Physics"
-                    content="Einstein"
-                    skills={['F=ma', 'E=mc^2']}
-                    isDarkMode={isDarkMode}
-                  />
-                </>
-              }
               key={0}
-            />
+            >
+              <h4
+                className={`text-lg font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-800'} mb-4`}
+              >
+                Modules
+              </h4>
+              <SkillsBox
+                title="Computer Science"
+                content="Provided the foundational knowledge of Computer Science"
+                skills={['C#', 'Unity', ' Algorithms and Data Structures']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Mathematics"
+                content="Maths stuff"
+                skills={['Calculus', 'Squares']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Physics"
+                content="Einstein"
+                skills={['F=ma', 'E=mc^2']}
+                isDarkMode={isDarkMode}
+              />
+            </LargeBox>
 
             <LargeBox
               title="Year 1"
@@ -67,60 +69,62 @@ function EducationPage() {
               grade="71% - First Class Pass"
               timePeriod="2022-2023"
               icon={<SchoolIcon />}
-              child={
-                <>
-                  <SkillsBox
-                    title="Introduction to Software Engineering"
-                    content="Robots and stuff"
-                    skills={['Ruby', 'Git', 'Agile Methodology']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Foundations of Computer Science"
-                    content=""
-                    skills={[]}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Java Programming"
-                    content=""
-                    skills={['Java', 'Object Object Oriented Programming']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Machines and Intelligence"
-                    content=""
-                    skills={['Miro Code']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Devices and Networks"
-                    content=""
-                    skills={[]}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Web and Internet Technology"
-                    content=""
-                    skills={['HTML', 'CSS', 'javaScript']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Introduction to Algorithms and Data Structures"
-                    content=""
-                    skills={['HTML', 'CSS', 'javaScript']}
-                    isDarkMode={isDarkMode}
-                  />
-                  <SkillsBox
-                    title="Gloabl Engineering Challenge Week"
-                    content=""
-                    skills={['Team Work', 'Presenting']}
-                    isDarkMode={isDarkMode}
-                  />
-                </>
-              }
               key={1}
-            />
+            >
+              <h4
+                className={`text-lg font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-800'} mb-4`}
+              >
+                Modules
+              </h4>
+              <SkillsBox
+                title="Introduction to Software Engineering"
+                content="Robots and stuff"
+                skills={['Ruby', 'Git', 'Agile Methodology']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Foundations of Computer Science"
+                content=""
+                skills={[]}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Java Programming"
+                content=""
+                skills={['Java', 'Object Object Oriented Programming']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Machines and Intelligence"
+                content=""
+                skills={['Miro Code']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Devices and Networks"
+                content=""
+                skills={[]}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Web and Internet Technology"
+                content=""
+                skills={['HTML', 'CSS', 'javaScript']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Introduction to Algorithms and Data Structures"
+                content=""
+                skills={['HTML', 'CSS', 'javaScript']}
+                isDarkMode={isDarkMode}
+              />
+              <SkillsBox
+                title="Gloabl Engineering Challenge Week"
+                content=""
+                skills={['Team Work', 'Presenting']}
+                isDarkMode={isDarkMode}
+              />
+            </LargeBox>
 
             <LargeBox
               title="Year 2"

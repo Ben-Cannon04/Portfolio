@@ -12,7 +12,7 @@ LargeBox.propTypes = {
   icon: PropTypes.node,
   grade: PropTypes.string,
   skills: PropTypes.array,
-  child: PropTypes.node,
+  children: PropTypes.node,
   isDarkMode: PropTypes.bool.isRequired,
 };
 
@@ -23,7 +23,7 @@ function LargeBox({
   description,
   grade,
   skills,
-  child,
+  children,
   isDarkMode,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -35,8 +35,8 @@ function LargeBox({
         className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
       >
         <div
-          className={`p-6 ${child ? 'cursor-pointer' : ''}`}
-          onClick={() => child && setIsExpanded(!isExpanded)}
+          className={`p-6 ${children ? 'cursor-pointer' : ''}`}
+          onClick={() => children && setIsExpanded(!isExpanded)}
         >
           <div className="flex flex-col sm:flex-row items-center sm:justify-between mb-4">
             <div className="flex-1">
@@ -46,7 +46,7 @@ function LargeBox({
                 >
                   {title}
                 </h3>
-                {child && (
+                {children && (
                   <div>
                     {isExpanded ? (
                       <ExpandLessIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
@@ -115,12 +115,7 @@ function LargeBox({
           <div
             className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-slate-800' : 'bg-gray-50'} w-full rounded-b-xl sm:rounded-b-2xl`}
           >
-            <h4
-              className={`text-lg font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-800'} mb-4`}
-            >
-              Modules
-            </h4>
-            {child}
+            {children}
           </div>
         )}
       </div>
