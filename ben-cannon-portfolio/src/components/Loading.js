@@ -29,7 +29,6 @@ function Loading({ children, loading, error, isDarkMode }) {
       </div>
     );
 
-   
   return children;
 }
 
