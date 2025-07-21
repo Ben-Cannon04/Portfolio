@@ -4,9 +4,10 @@ import {
   renderComponent,
   useComponentData,
 } from '../services/JsonToComponentConverterService';
+import Loading from '../components/Loading';
 
 function ProjectsPage() {
-  const [enabled] = useOutletContext();
+  const [isDarkMode] = useOutletContext();
 
   const { data, loading, error } = useComponentData('work-data');
 
@@ -14,20 +15,20 @@ function ProjectsPage() {
   if (error) return <div>Error loading data</div>;
 
   const boxes = data?.boxes.map((boxData, index) =>
-    renderComponent(boxData, index, { enabled })
+    renderComponent(boxData, index, { isDarkMode })
   );
 
   return (
-    <div>
+    <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
       {data && (
         <GridLayout
           boxes={boxes}
-          lightTheme={enabled}
+          lightTheme={isDarkMode}
           horizontalBoxes={[0, 1]}
           verticalBoxes={[]}
         />
       )}
-    </div>
+    </Loading>
   );
 }
 
