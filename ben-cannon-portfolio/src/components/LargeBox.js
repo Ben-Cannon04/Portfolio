@@ -13,7 +13,8 @@ LargeBox.propTypes = {
   grade: PropTypes.string,
   skills: PropTypes.array,
   children: PropTypes.node,
-  isDarkMode: PropTypes.bool.isRequired,
+  expandedByDefault: PropTypes.bool,
+  isDarkMode: PropTypes.bool.isRequired
 };
 
 function LargeBox({
@@ -24,9 +25,10 @@ function LargeBox({
   grade,
   skills,
   children,
-  isDarkMode,
+  expandedByDefault = false,
+  isDarkMode
 }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (
     <div
       className={`relative mb-8 sm:mb-12 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}
