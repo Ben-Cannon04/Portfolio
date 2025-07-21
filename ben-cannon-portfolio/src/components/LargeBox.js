@@ -14,7 +14,7 @@ LargeBox.propTypes = {
   skills: PropTypes.array,
   children: PropTypes.node,
   expandedByDefault: PropTypes.bool,
-  isDarkMode: PropTypes.bool.isRequired
+  isDarkMode: PropTypes.bool.isRequired,
 };
 
 function LargeBox({
@@ -26,7 +26,7 @@ function LargeBox({
   skills,
   children,
   expandedByDefault = false,
-  isDarkMode
+  isDarkMode,
 }) {
   const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (

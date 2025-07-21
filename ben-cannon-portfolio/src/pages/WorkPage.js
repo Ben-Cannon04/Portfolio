@@ -29,13 +29,19 @@ function WorkPage() {
               skills={[
                 'Java',
                 'Python',
-                'Ci/Cd Pipelines',
-                'FFMPEG',
+                'CI/CD Pipelines',
+                'FFmpeg',
                 'JavaScipt',
               ]}
               timePeriod="June - September 2023"
+              expandedByDefault={true}
               key={0}
-            />
+            >
+              <h1>What Yunex Traffic Do?</h1>
+              <p>stuff...</p>
+              <h1>What I worked on?</h1>
+              <p>stuff...</p>
+            </LargeBox>
 
             <LargeBox
               title="Juniour Software Engineer"
@@ -43,10 +49,14 @@ function WorkPage() {
               description=""
               isDarkMode={isDarkMode}
               skills={['C# wpf', 'C++', 'Design Patterns', 'Git']}
-              timePeriod="June - September 2023"
-              key={0}
+              timePeriod="June 2024 - July 2025"
+              expandedByDefault={true}
+              key={1}
             >
-              <p>Description</p>
+              <h1>What Certara Do?</h1>
+              <p>stuff...</p>
+              <h1>What I worked on?</h1>
+              <p>stuff...</p>
             </LargeBox>
           </div>
         </div>
