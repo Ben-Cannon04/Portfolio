@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 Loading.propTypes = {
   loading: PropTypes.bool.isRequired,
@@ -8,6 +9,21 @@ Loading.propTypes = {
 };
 
 function Loading({ children, loading, error, isDarkMode }) {
+  const [showLoading, setShowLoading] = useState(false);
+
+  useEffect(() => {
+    if (!showLoading) {
+      const timer = setTimeout(() => {
+        setShowLoading(true);
+      }, 500);
+
+      return () => clearTimeout(timer);
+    } else {
+      setShowLoading(false);
+    }
+  }, []);
+
+  if (!showLoading) return <></>;
   if (loading)
     return (
       <div

@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 function WorkPage() {
   const [isDarkMode] = useOutletContext();
 
-  const {  loading, error } = useComponentData('work-data');
+  const { loading, error } = useComponentData('work-data');
 
   return (
     <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
