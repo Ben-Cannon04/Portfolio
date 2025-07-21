@@ -54,16 +54,19 @@ function EducationPage() {
                   title="Computer Science"
                   content="Provided the foundational knowledge of Computer Science"
                   skills={['C#', 'Unity', ' Algorithms and Data Structures']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Mathematics"
                   content="Maths stuff"
                   skills={['Calculus', 'Squares']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Physics"
                   content="Einstein"
                   skills={['F=ma', 'E=mc^2']}
+                  isDarkMode={isDarkMode}
                 />
               </>
             }
@@ -85,41 +88,49 @@ function EducationPage() {
                   title="Introduction to Software Engineering"
                   content="Robots and stuff"
                   skills={['Ruby', 'Git', 'Agile Methodology']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Foundations of Computer Science"
                   content=""
                   skills={[]}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Java Programming"
                   content=""
                   skills={['Java', 'Object Object Oriented Programming']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Machines and Intelligence"
                   content=""
                   skills={['Miro Code']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Devices and Networks"
                   content=""
                   skills={[]}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Web and Internet Technology"
                   content=""
                   skills={['HTML', 'CSS', 'javaScript']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Introduction to Algorithms and Data Structures"
                   content=""
                   skills={['HTML', 'CSS', 'javaScript']}
+                  isDarkMode={isDarkMode}
                 />
                 <SkillsBox
                   title="Gloabl Engineering Challenge Week"
                   content=""
                   skills={['Team Work', 'Presenting']}
+                  isDarkMode={isDarkMode}
                 />
               </>
             }

@@ -31,8 +31,6 @@ function LargeBox({
     <div
       className={`relative mb-8 sm:mb-12 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}
     >
-      
-
       <div
         className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
       >
@@ -58,7 +56,9 @@ function LargeBox({
                   </div>
                 )}
               </div>
-              <p className="text-base text-left sm:text-lg text-gray-600 mb-2">
+              <p
+                className={`text-base text-left sm:text-lg ${isDarkMode ? 'text-secondary-dark' : 'text-gray-600'} mb-2`}
+              >
                 {subtitle}
               </p>
             </div>
@@ -70,12 +70,16 @@ function LargeBox({
             </div>
           </div>
 
-          <p className="text-gray-700 mb-4 text-sm sm:text-base text-left">
+          <p
+            className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-4 text-sm sm:text-base text-left`}
+          >
             {description}
           </p>
 
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-600 mb-2 text-left">
+            <h4
+              className={`text-sm font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-2 text-left`}
+            >
               Key Skills:
             </h4>
             <div className="flex flex-wrap gap-2">
@@ -87,7 +91,11 @@ function LargeBox({
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div className="flex items-center">
-              <span className="text-sm text-gray-600 mr-2">Grade:</span>
+              <span
+                className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
+              >
+                Grade:
+              </span>
               <span
                 className={`font-semibold px-3 py-1 rounded-lg text-sm ${
                   grade === 'In Progress'
@@ -101,11 +109,15 @@ function LargeBox({
           </div>
         </div>
         {isExpanded && (
-          <div className="border-t border-gray-200 mt-2 p-4 sm:p-6 bg-gray-50 w-full rounded-b-xl sm:rounded-b-2xl">
-            <h4 className="text-lg font-semibold text-gray-800 mb-4">
+          <div
+            className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-slate-800' : 'bg-gray-50'} w-full rounded-b-xl sm:rounded-b-2xl`}
+          >
+            <h4
+              className={`text-lg font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-800'} mb-4`}
+            >
               Modules
             </h4>
-            <div className="space-y-4">{child}</div>
+            {child}
           </div>
         )}
       </div>

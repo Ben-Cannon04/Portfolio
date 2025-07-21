@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import { Link } from 'react-router-dom';
+import { iconMap } from '../constants/IconMap';
 
 DescriptionBox.propTypes = {
   title: PropTypes.string.isRequired,
@@ -25,7 +26,9 @@ function DescriptionBox({ title, content, link, icon, isDarkMode }) {
       <div className="p-4 sm:p-6 h-full flex flex-col">
         <div className="flex-1">
           <div className="flex flex-col items-center mb-2 sm:mb-3">
-            <div className="flex items-center ml-2 flex-shrink-0">{icon}</div>
+            <div className="flex items-center ml-2 flex-shrink-0">
+              {iconMap[icon]}
+            </div>
             <h3
               className={`font-bold text-base sm:text-lg leading-tight text-center ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
             >
@@ -34,7 +37,7 @@ function DescriptionBox({ title, content, link, icon, isDarkMode }) {
           </div>
           {content && (
             <p
-              className={`text-xs sm:text-sm leading-relaxed text-center ${!isDarkMode ? 'text-secondary-dark' : 'text-secondary-light'}`}
+              className={`text-xs sm:text-sm leading-relaxed text-center ${isDarkMode ? 'text-secondary-dark' : 'text-secondary-light'}`}
             >
               {content}
             </p>
