@@ -8,8 +8,6 @@ function App() {
   useEffect(() => {
     document.body.classList.remove(
       'min-h-screen',
-      'bg-neutral-100',
-      'bg-zinc-800',
       'bg-gradient-to-br',
       'from-gray-900',
       'via-gray-800',
@@ -18,23 +16,11 @@ function App() {
       'via-white',
       'to-purple-50'
     );
-
+    
     if (isDarkMode) {
-      document.body.classList.add(
-        'min-h-screen',
-        'bg-gradient-to-br',
-        'from-gray-900',
-        'via-gray-800',
-        'to-gray-900'
-      );
+      document.body.classList.add('min-h-screen', 'bg-gradient-to-br', 'from-gray-900', 'via-gray-800', 'to-gray-900');
     } else {
-      document.body.classList.add(
-        'min-h-screen',
-        'bg-gradient-to-br',
-        'from-blue-50',
-        'via-white',
-        'to-purple-50'
-      );
+      document.body.classList.add('min-h-screen', 'bg-gradient-to-br', 'from-blue-50', 'via-white', 'to-purple-50');
     }
   }, [isDarkMode]);
 
@@ -42,8 +28,8 @@ function App() {
     <>
       <main
         className={`text-center py-2 min-h-screen ${
-          isDarkMode
-            ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900'
+          isDarkMode 
+            ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' 
             : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
         }`}
       >
