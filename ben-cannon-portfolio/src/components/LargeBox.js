@@ -12,7 +12,8 @@ LargeBox.propTypes = {
   icon: PropTypes.node,
   grade: PropTypes.string,
   skills: PropTypes.array,
-  child: PropTypes.node,
+  children: PropTypes.node,
+  expandedByDefault: PropTypes.bool,
   isDarkMode: PropTypes.bool.isRequired,
 };
 
@@ -23,10 +24,11 @@ function LargeBox({
   description,
   grade,
   skills,
-  child,
+  children,
+  expandedByDefault = false,
   isDarkMode,
 }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (
     <div
       className={`relative mb-8 sm:mb-12 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}
@@ -35,8 +37,8 @@ function LargeBox({
         className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
       >
         <div
-          className={`p-6 ${child ? 'cursor-pointer' : ''}`}
-          onClick={() => child && setIsExpanded(!isExpanded)}
+          className={`p-6 ${children ? 'cursor-pointer' : ''}`}
+          onClick={() => children && setIsExpanded(!isExpanded)}
         >
           <div className="flex flex-col sm:flex-row items-center sm:justify-between mb-4">
             <div className="flex-1">
@@ -46,7 +48,7 @@ function LargeBox({
                 >
                   {title}
                 </h3>
-                {child && (
+                {children && (
                   <div>
                     {isExpanded ? (
                       <ExpandLessIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
@@ -89,35 +91,33 @@ function LargeBox({
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div className="flex items-center">
-              <span
-                className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
-              >
-                Grade:
-              </span>
-              <span
-                className={`font-semibold px-3 py-1 rounded-lg text-sm ${
-                  grade === 'In Progress'
-                    ? 'bg-bg-warning text-text-warning'
-                    : 'bg-bg-success text-text-success'
-                }`}
-              >
-                {grade}
-              </span>
+          {grade && (
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="flex items-center">
+                <span
+                  className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
+                >
+                  Grade:
+                </span>
+                <span
+                  className={`font-semibold px-3 py-1 rounded-lg text-sm ${
+                    grade === 'In Progress'
+                      ? 'bg-bg-warning text-text-warning'
+                      : 'bg-bg-success text-text-success'
+                  }`}
+                >
+                  {grade}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
+
         {isExpanded && (
           <div
             className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-slate-800' : 'bg-gray-50'} w-full rounded-b-xl sm:rounded-b-2xl`}
           >
-            <h4
-              className={`text-lg font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-800'} mb-4`}
-            >
-              Modules
-            </h4>
-            {child}
+            {children}
           </div>
         )}
       </div>

@@ -8,8 +8,6 @@ function App() {
   useEffect(() => {
     document.body.classList.remove(
       'min-h-screen',
-      'bg-neutral-100',
-      'bg-zinc-800',
       'bg-gradient-to-br',
       'from-gray-900',
       'via-gray-800',
