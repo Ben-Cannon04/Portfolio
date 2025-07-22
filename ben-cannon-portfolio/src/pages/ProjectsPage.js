@@ -32,7 +32,7 @@ function ProjectsPage() {
               <button
                 key={item}
                 onClick={() => setFilter(item)}
-                className={`px-4 py-2 transition-all duration-200 hover:opacity-80 border-b-2 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}
+                className={`px-2 sm:px-4 py-2 transition-all duration-200 hover:opacity-80 border-b-2 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}
                   ${
                     filter === item
                       ? `${isDarkMode ? 'border-white' : 'border-black'} hover:border-opacity-80 font-semibold scale-105`
