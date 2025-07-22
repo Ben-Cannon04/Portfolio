@@ -1,25 +1,23 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { iconMap } from '../constants/IconMap';
+import { useNavigate } from 'react-router-dom';
 
 BackButton.propTypes = {
-  link: PropTypes.string,
   icon: PropTypes.string,
   isDarkMode: PropTypes.bool,
 };
 
-function BackButton({
-  link = '/Portfolio',
-  icon = 'ArrowBackIcon',
-  isDarkMode,
-}) {
+function BackButton({ icon = 'ArrowBackIcon', isDarkMode }) {
+  const navigate = useNavigate();
   return (
-    <Link
-      to={link}
+    <button
       className={`${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+      onClick={() => {
+        navigate(-1);
+      }}
     >
       {iconMap[icon]}
-    </Link>
+    </button>
   );
 }
 
