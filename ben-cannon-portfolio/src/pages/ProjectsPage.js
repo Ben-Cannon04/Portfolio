@@ -1,23 +1,13 @@
 import { useOutletContext } from 'react-router-dom';
-import GridLayout from '../components/GridLayout';
-import {
-  renderComponent,
-  useComponentData,
-} from '../services/JsonToComponentConverterService';
+import { useComponentData } from '../services/JsonToComponentConverterService';
 import Loading from '../components/Loading';
 import BackButton from '../components/BackButton';
+import LargeBox from '../components/LargeBox';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
 
-  const { data, loading, error } = useComponentData('work-data');
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
-
-  const boxes = data?.boxes.map((boxData, index) =>
-    renderComponent(boxData, index, { isDarkMode })
-  );
+  const { loading, error } = useComponentData('work-data');
 
   return (
     <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
@@ -25,14 +15,63 @@ function ProjectsPage() {
         <BackButton isDarkMode={isDarkMode} />
       </div>
 
-      {data && (
-        <GridLayout
-          boxes={boxes}
-          lightTheme={isDarkMode}
-          horizontalBoxes={[0, 1]}
-          verticalBoxes={[]}
-        />
-      )}
+      <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h1
+              className={`text-2xl sm:text-4xl font-bold mb-2 sm:mb-4 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+            >
+              Projects
+            </h1>
+          </div>
+
+          <div className="relative">
+            <LargeBox
+              title="Portfolio"
+              subtitle="Personal"
+              description="The Portfolio You're using now I've created in my own time to help show my software expierence."
+              isDarkMode={isDarkMode}
+              skills={['ReactJS', 'Tailwind Css', 'GitHub Pages']}
+              timePeriod="Ongoing"
+              expandedByDefault={true}
+              key={0}
+            />
+
+            <LargeBox
+              title="Finance Fate"
+              subtitle="HackSheffield7"
+              description="We created a guessing game using the data provided from Capital One's API, this won us the prize for 'best use of Capital One's API'. We used C# ASP.NET and Bootstrap to achieve this."
+              isDarkMode={isDarkMode}
+              skills={['C# ASP.NET', 'Bootstrap']}
+              timePeriod="July 202"
+              expandedByDefault={true}
+              key={0}
+            />
+
+            <LargeBox
+              title="Rogue-like Game"
+              subtitle="SheffJam 9"
+              description="We created a rougue like game to fit the theme 'Villian'. We won the 'best interpretation of the theme' We created our own Assets."
+              isDarkMode={isDarkMode}
+              skills={['Unity', 'C#']}
+              timePeriod="July 2023"
+              expandedByDefault={true}
+              key={0}
+            />
+
+            <LargeBox
+              title="Chess Game"
+              subtitle="A-level Computer Science Project"
+              description="Player vs player and Player vs Ai chess game. Can look at stats afterwards."
+              isDarkMode={isDarkMode}
+              skills={['Unity', 'C#']}
+              timePeriod="January - May 2021"
+              expandedByDefault={true}
+              key={0}
+            />
+          </div>
+        </div>
+      </div>
     </Loading>
   );
 }
