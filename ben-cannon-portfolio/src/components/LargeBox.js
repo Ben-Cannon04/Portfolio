@@ -19,6 +19,7 @@ LargeBox.propTypes = {
   link: PropTypes.string,
   linkTitle: PropTypes.string,
   expandedByDefault: PropTypes.bool,
+  hide: PropTypes.bool,
   isDarkMode: PropTypes.bool.isRequired,
 };
 
@@ -34,8 +35,12 @@ function LargeBox({
   link,
   linkTitle = 'Show More',
   expandedByDefault = false,
+  hide = false,
   isDarkMode,
 }) {
+  if (hide) {
+    return null;
+  }
   const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (
     <div
