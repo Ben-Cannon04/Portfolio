@@ -13,6 +13,7 @@ LargeBox.propTypes = {
   grade: PropTypes.string,
   skills: PropTypes.array,
   children: PropTypes.node,
+  image: PropTypes.string,
   expandedByDefault: PropTypes.bool,
   isDarkMode: PropTypes.bool.isRequired,
 };
@@ -25,6 +26,7 @@ function LargeBox({
   grade,
   skills,
   children,
+  image,
   expandedByDefault = false,
   isDarkMode,
 }) {
@@ -42,7 +44,7 @@ function LargeBox({
         >
           <div className="flex flex-col sm:flex-row items-center sm:justify-between mb-4">
             <div className="flex-1">
-              <div className="flex items-center gap-2 mb-2 sm:mb-0">
+              <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-0">
                 <h3
                   className={`text-xl sm:text-2xl font-bold ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
                 >
@@ -59,32 +61,43 @@ function LargeBox({
                 )}
               </div>
               <p
-                className={`text-base text-left sm:text-lg ${isDarkMode ? 'text-secondary-dark' : 'text-gray-600'} mb-2`}
+                className={`text-base text-center sm:text-left sm:text-lg ${isDarkMode ? 'text-secondary-dark' : 'text-gray-600'} mb-2`}
               >
                 {subtitle}
               </p>
             </div>
 
             <div className="text-left sm:text-right">
-              <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="inline-block  text-center sm:text-left bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                 {timePeriod}
               </span>
             </div>
           </div>
 
+          {image && (
+            <div className="flex justify-center sm:justify-start">
+              <img
+                src={image}
+                className="h-48 sm:h-56 object-contain rounded-lg sm:rounded-xl mb-4 "
+              />
+            </div>
+          )}
+
           <p
-            className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-4 text-sm sm:text-base text-left`}
+            className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-4 text-sm sm:text-base text-center sm:text-left`}
           >
             {description}
           </p>
 
+          {!description && <br />}
+
           <div className="mb-4">
             <h4
-              className={`text-sm font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-2 text-left`}
+              className={`text-sm font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-2 text-center sm:text-left`}
             >
               Key Skills:
             </h4>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
               {skills.map((skill, id) => (
                 <Skill key={id} text={skill} />
               ))}
@@ -92,7 +105,7 @@ function LargeBox({
           </div>
 
           {grade && (
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 mt-8 sm:mt-2">
               <div className="flex items-center">
                 <span
                   className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
