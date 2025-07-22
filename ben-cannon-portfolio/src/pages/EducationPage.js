@@ -152,6 +152,7 @@ function EducationPage() {
               timePeriod="2024-2024"
               grade="Pass"
               icon={<EngineeringIcon />}
+              link="/Portfolio/work"
               key={3}
             />
 
