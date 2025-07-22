@@ -14,7 +14,7 @@
     },
     {
       "type": "DescriptionBox",
-      "title": "work experience",
+      "title": "Work experience",
       "content": "I have worked as a software intern at Yunex Traffic, where I was able to use python, javascript and java. I'm starting my role as junior developer at Certara on June 10th.",
       "link": "/Portfolio/work",
       "icon": "WorkIcon"
@@ -24,7 +24,7 @@
     },
     {
       "type": "DescriptionBox",
-      "title": "extracurricular",
+      "title": "Languages / Contact Page",
       "content": "In my spare time I have competed in multiple Hackathons and GameJams. I have also been the treasurer of the Game Development Society at the University of Sheffield",
       "link": "/Portfolio/extracurricular",
       "icon": "EmojiEventsIcon"
@@ -43,8 +43,8 @@
     },
     {
       "type": "DescriptionBox",
-      "title": "projects",
-      "content": "",
+      "title": "Projects",
+      "content": "I've completed projects inn different languages and frameworks for university, work and personal use. Click here for more.",
       "link": "/Portfolio/projects",
       "icon": "CodeIcon"
     }
