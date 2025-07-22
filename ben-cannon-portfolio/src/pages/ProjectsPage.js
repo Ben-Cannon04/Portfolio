@@ -4,10 +4,11 @@ import Loading from '../components/Loading';
 import BackButton from '../components/BackButton';
 import LargeBox from '../components/LargeBox';
 import SheffJam9Image from '../assets/images/SheffJam9.png';
+import { useState } from 'react';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
-
+  const [filter, setFilter] = useState('all');
   const { loading, error } = useComponentData('work-data');
 
   return (
@@ -26,6 +27,23 @@ function ProjectsPage() {
             </h1>
           </div>
 
+          <div className="flex gap-4 m-5 p-4 items-center justify-center">
+            {['all', 'personal', 'education', 'work'].map(item => (
+              <button
+                key={item}
+                onClick={() => setFilter(item)}
+                className={`px-4 py-2 transition-all duration-200 hover:opacity-80 border-b-2 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}
+                  ${
+                    filter === item
+                      ? `${isDarkMode ? 'border-white' : 'border-black'} hover:border-opacity-80 font-semibold scale-105`
+                      : 'border-transparent'
+                  }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+
           <div className="relative">
             <LargeBox
               title="Portfolio"
@@ -34,17 +52,8 @@ function ProjectsPage() {
               isDarkMode={isDarkMode}
               skills={['ReactJS', 'Tailwind Css', 'GitHub Pages']}
               timePeriod="Ongoing"
+              hide={filter != 'all' && filter != 'personal'}
               key={0}
-            />
-
-            <LargeBox
-              title="Finance Fate"
-              subtitle="HackSheffield7"
-              description="We created a guessing game using the data provided from Capital One's API, this won us the prize for 'best use of Capital One's API'. We used C# ASP.NET and Bootstrap to achieve this."
-              isDarkMode={isDarkMode}
-              skills={['C# ASP.NET', 'Bootstrap']}
-              timePeriod="July 202"
-              key={1}
             />
 
             <LargeBox
@@ -55,6 +64,18 @@ function ProjectsPage() {
               skills={['Unity', 'C#']}
               timePeriod="July 2023"
               image={SheffJam9Image}
+              hide={filter != 'all' && filter != 'education'}
+              key={1}
+            />
+
+            <LargeBox
+              title="Finance Fate"
+              subtitle="HackSheffield7"
+              description="We created a guessing game using the data provided from Capital One's API, this won us the prize for 'best use of Capital One's API'. We used C# ASP.NET and Bootstrap to achieve this."
+              isDarkMode={isDarkMode}
+              skills={['C# ASP.NET', 'Bootstrap']}
+              timePeriod="July 2022"
+              hide={filter != 'all' && filter != 'education'}
               key={2}
             />
 
@@ -65,6 +86,7 @@ function ProjectsPage() {
               isDarkMode={isDarkMode}
               skills={['Unity', 'C#']}
               timePeriod="January - May 2021"
+              hide={filter != 'all' && filter != 'education'}
               key={3}
             />
           </div>
