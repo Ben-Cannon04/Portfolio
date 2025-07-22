@@ -3,6 +3,7 @@ import { useComponentData } from '../services/JsonToComponentConverterService';
 import Loading from '../components/Loading';
 import BackButton from '../components/BackButton';
 import LargeBox from '../components/LargeBox';
+import SheffJam9Image from '../assets/images/SheffJam9.png';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
@@ -33,7 +34,6 @@ function ProjectsPage() {
               isDarkMode={isDarkMode}
               skills={['ReactJS', 'Tailwind Css', 'GitHub Pages']}
               timePeriod="Ongoing"
-              expandedByDefault={true}
               key={0}
             />
 
@@ -44,19 +44,18 @@ function ProjectsPage() {
               isDarkMode={isDarkMode}
               skills={['C# ASP.NET', 'Bootstrap']}
               timePeriod="July 202"
-              expandedByDefault={true}
-              key={0}
+              key={1}
             />
 
             <LargeBox
               title="Rogue-like Game"
               subtitle="SheffJam 9"
-              description="We created a rougue like game to fit the theme 'Villian'. We won the 'best interpretation of the theme' We created our own Assets."
+              description="My team created a rougue like game to fit the theme 'Villian'. We won the 'best interpretation of the theme' We created our own Assets."
               isDarkMode={isDarkMode}
               skills={['Unity', 'C#']}
               timePeriod="July 2023"
-              expandedByDefault={true}
-              key={0}
+              image={SheffJam9Image}
+              key={2}
             />
 
             <LargeBox
@@ -66,8 +65,7 @@ function ProjectsPage() {
               isDarkMode={isDarkMode}
               skills={['Unity', 'C#']}
               timePeriod="January - May 2021"
-              expandedByDefault={true}
-              key={0}
+              key={3}
             />
           </div>
         </div>

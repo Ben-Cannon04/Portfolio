@@ -13,6 +13,7 @@ LargeBox.propTypes = {
   grade: PropTypes.string,
   skills: PropTypes.array,
   children: PropTypes.node,
+  image: PropTypes.string,
   expandedByDefault: PropTypes.bool,
   isDarkMode: PropTypes.bool.isRequired,
 };
@@ -25,6 +26,7 @@ function LargeBox({
   grade,
   skills,
   children,
+  image,
   expandedByDefault = false,
   isDarkMode,
 }) {
@@ -71,6 +73,15 @@ function LargeBox({
               </span>
             </div>
           </div>
+
+          {image && (
+            <div className="flex justify-center sm:justify-start">
+              <img
+                src={image}
+                className="h-48 sm:h-56 object-contain rounded-lg sm:rounded-xl mb-4 "
+              />
+            </div>
+          )}
 
           <p
             className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-4 text-sm sm:text-base text-left`}
