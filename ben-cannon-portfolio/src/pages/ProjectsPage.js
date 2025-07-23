@@ -1,7 +1,6 @@
 import { useOutletContext } from 'react-router-dom';
 import { useComponentData } from '../services/JsonToComponentConverterService';
 import Loading from '../components/Loading';
-import BackButton from '../components/BackButton';
 import LargeBox from '../components/LargeBox';
 import SheffJam9Image from '../assets/images/SheffJam9.png';
 import { useState } from 'react';
@@ -13,9 +12,6 @@ function ProjectsPage() {
 
   return (
     <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
-      <div className="absolute sm:top-10 sm:left-10 top-5 left-5">
-        <BackButton isDarkMode={isDarkMode} />
-      </div>
 
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">

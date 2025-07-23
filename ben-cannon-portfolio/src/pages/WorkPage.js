@@ -2,7 +2,6 @@ import { useOutletContext } from 'react-router-dom';
 import { useComponentData } from '../services/JsonToComponentConverterService';
 import LargeBox from '../components/LargeBox';
 import Loading from '../components/Loading';
-import BackButton from '../components/BackButton';
 
 function WorkPage() {
   const [isDarkMode] = useOutletContext();
@@ -11,9 +10,6 @@ function WorkPage() {
 
   return (
     <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
-      <div className="absolute sm:top-10 sm:left-10 top-5 left-5">
-        <BackButton isDarkMode={isDarkMode} />
-      </div>
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
