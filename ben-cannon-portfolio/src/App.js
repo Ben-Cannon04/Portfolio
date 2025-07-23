@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 import useLocalStorage from 'use-local-storage';
+import NavBar from './components/NavBar';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage('isDarkMode', 'false');
@@ -45,6 +46,7 @@ function App() {
             : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
         }`}
       >
+        <NavBar isDarkMode={isDarkMode}/>
         <Outlet context={[isDarkMode, setIsDarkMode]} />
       </main>
     </>
