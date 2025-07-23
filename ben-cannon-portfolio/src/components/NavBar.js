@@ -11,7 +11,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 NavBar.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired
+  isDarkMode: PropTypes.bool.isRequired,
 };
 function NavBar({ isDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +34,13 @@ function NavBar({ isDarkMode }) {
             aria-label="Toggle navigation"
           >
             {isOpen ? (
-              <CloseIcon className={`h-6 w-6 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`} />
+              <CloseIcon
+                className={`h-6 w-6 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              />
             ) : (
-              <MenuIcon className={`h-6 w-6 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`} />
+              <MenuIcon
+                className={`h-6 w-6 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              />
             )}
           </button>
           <div className="w-10" />
@@ -55,12 +59,18 @@ function NavBar({ isDarkMode }) {
       >
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className={`text-xl font-bold ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}>Menu</h2>
+            <h2
+              className={`text-xl font-bold ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+            >
+              Menu
+            </h2>
             <button
               onClick={closeNav}
               className={`p-1 rounded-md hover:bg-opacity-80 transition-colors`}
             >
-              <CloseIcon className={`h-5 w-5 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}/>
+              <CloseIcon
+                className={`h-5 w-5 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              />
             </button>
           </div>
 
@@ -107,15 +117,23 @@ function NavBar({ isDarkMode }) {
             </li>
           </ul>
         </div>
-        <div className='flex items-center px-3 '>
-          <button className={`space-x-3 px-3 py-2 ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
-          onClick={() => window.open('https://www.linkedin.com/in/ben-cannon04', '_blank')}>
-            <LinkedInIcon  className="h-5 w-5"/>
+        <div className="flex items-center px-3 ">
+          <button
+            className={`space-x-3 px-3 rounded-md py-2 ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
+            onClick={() =>
+              window.open('https://www.linkedin.com/in/ben-cannon04', '_blank')
+            }
+          >
+            <LinkedInIcon className="h-5 w-5" />
           </button>
-          
-          <button className={`space-x-3 px-3 py-2 ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
-           onClick={() => window.open('https://github.com/Ben-Cannon04', '_blank')}>
-            <GitHubIcon  className="h-5 w-5"/>
+
+          <button
+            className={`space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
+            onClick={() =>
+              window.open('https://github.com/Ben-Cannon04', '_blank')
+            }
+          >
+            <GitHubIcon className="h-5 w-5" />
           </button>
         </div>
       </nav>

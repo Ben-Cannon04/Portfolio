@@ -12,7 +12,6 @@ function ProjectsPage() {
 
   return (
     <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
-
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
