@@ -26,7 +26,7 @@ function NavBar({ isDarkMode }) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40">
+      <header className="absolute top-0 left-0 right-0 z-40">
         <div className="flex items-center justify-between px-4 py-3">
           <button
             onClick={toggleNav}
