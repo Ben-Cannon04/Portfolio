@@ -11,7 +11,7 @@ SkillsBox.propTypes = {
 function SkillsBox({ title, content, skills, isDarkMode }) {
   return (
     <div
-      className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} text-pretty border border-border-light rounded-xl sm:rounded-2xl m-3 p-4 text-left`}
+      className={`${isDarkMode ? 'bg-bg-dark' : 'bg-bg-light'} text-pretty border border-border-light rounded-xl sm:rounded-2xl m-3 p-4 text-left`}
     >
       <h2
         className={`text-sm sm:text-base font-bold font-mono pt-4 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}

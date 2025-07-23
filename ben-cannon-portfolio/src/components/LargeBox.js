@@ -150,7 +150,7 @@ function LargeBox({
 
         {isExpanded && (
           <div
-            className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-slate-800' : 'bg-gray-50'} w-full rounded-b-xl sm:rounded-b-2xl`}
+            className={`border-t border-gray-200 mt-2 p-4 sm:p-6 ${isDarkMode ? 'bg-accent-dark' : 'bg-accent-light'} w-full rounded-b-xl sm:rounded-b-2xl`}
           >
             {children}
           </div>
