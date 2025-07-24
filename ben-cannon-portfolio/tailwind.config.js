@@ -23,6 +23,10 @@ module.exports = {
         'bg-success': '#dcfce7', // green-100
         'text-warning': '#854d0e', // amber-800
         'bg-warning': '#fef9c3', // amber-100
+        'text-danger': '#991b1b', // red-800
+        'bg-danger': '#fee2e2', // red-100
+        'text-info': '#1e40af', // blue-800
+        'bg-info': '#dbeafe', // blue-100
       },
     },
   },

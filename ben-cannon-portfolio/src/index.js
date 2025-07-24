@@ -7,6 +7,7 @@ import WorkPage from './pages/WorkPage';
 import HomePage from './pages/HomePage';
 import EducationPage from './pages/EducationPage';
 import ProjectsPage from './pages/ProjectsPage';
+import TechnologiesPage from './pages/TechnologiesPage';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/Portfolio/projects',
         element: <ProjectsPage />,
+      },
+      {
+        path: '/Portfolio/technologies',
+        element: <TechnologiesPage />,
       },
     ],
   },

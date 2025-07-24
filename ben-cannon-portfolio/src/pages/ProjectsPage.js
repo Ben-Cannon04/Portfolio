@@ -4,6 +4,7 @@ import Loading from '../components/Loading';
 import LargeBox from '../components/LargeBox';
 import SheffJam9Image from '../assets/images/SheffJam9.png';
 import { useState } from 'react';
+import Filter from '../components/Filter';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
@@ -22,22 +23,12 @@ function ProjectsPage() {
             </h1>
           </div>
 
-          <div className="flex gap-4 m-5 p-4 items-center justify-center">
-            {['all', 'personal', 'education', 'work'].map(item => (
-              <button
-                key={item}
-                onClick={() => setFilter(item)}
-                className={`px-2 sm:px-4 py-2 transition-all duration-200 hover:opacity-80 border-b-2 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}
-                  ${
-                    filter === item
-                      ? `${isDarkMode ? 'border-white' : 'border-black'} hover:border-opacity-80 font-semibold scale-105`
-                      : 'border-transparent'
-                  }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+          <Filter
+            filter={filter}
+            setFilter={setFilter}
+            filters={['all', 'personal', 'education', 'work']}
+            isDarkMode={isDarkMode}
+          />
 
           <div className="relative">
             <LargeBox

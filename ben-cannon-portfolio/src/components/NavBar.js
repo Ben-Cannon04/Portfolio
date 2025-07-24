@@ -7,6 +7,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import CodeIcon from '@mui/icons-material/Code';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -113,6 +114,16 @@ function NavBar({ isDarkMode }) {
               >
                 <TerminalIcon className="h-5 w-5" />
                 <span>Projects</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Portfolio/technologies"
+                className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
+                onClick={closeNav}
+              >
+                <CodeIcon className="h-5 w-5" />
+                <span>Technologies</span>
               </Link>
             </li>
           </ul>

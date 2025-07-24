@@ -78,11 +78,13 @@ function LargeBox({
               </p>
             </div>
 
-            <div className="text-left sm:text-right">
-              <span className="inline-block text-center sm:text-left bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
-                {timePeriod}
-              </span>
-            </div>
+            {timePeriod && (
+              <div className="text-left sm:text-right">
+                <span className="inline-block text-center sm:text-left bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                  {timePeriod}
+                </span>
+              </div>
+            )}
           </div>
 
           {image && (
@@ -95,25 +97,27 @@ function LargeBox({
           )}
 
           <p
-            className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-4 text-sm sm:text-base text-center sm:text-left`}
+            className={`${isDarkMode ? 'text-primary-dark' : 'text-primary-light'} mb-4 text-sm sm:text-base text-center sm:text-left`}
           >
             {description}
           </p>
 
           {!description && <br />}
 
-          <div className="mb-4">
-            <h4
-              className={`text-sm font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-2 text-center sm:text-left`}
-            >
-              Key Skills:
-            </h4>
-            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-              {skills.map((skill, id) => (
-                <Skill key={id} text={skill} />
-              ))}
+          {skills && (
+            <div className="mb-4">
+              <h4
+                className={`text-sm font-semibold ${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} mb-2 text-center sm:text-left`}
+              >
+                Key Skills:
+              </h4>
+              <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                {skills.map((skill, id) => (
+                  <Skill key={id} text={skill} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {grade && (
             <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 mt-8 sm:mt-2">
