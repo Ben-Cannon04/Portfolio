@@ -1,19 +1,47 @@
-import { useOutletContext } from 'react-router-dom';
-import { useComponentData } from '../services/JsonToComponentConverterService';
+import { useLocation, useOutletContext } from 'react-router-dom';
 import Loading from '../components/Loading';
 import LargeBox from '../components/LargeBox';
 import SheffJam9Image from '../assets/images/SheffJam9.png';
 import ChessImage from '../assets/images/chess.png';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Filter from '../components/Filter';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
   const [filter, setFilter] = useState('all');
-  const { loading, error } = useComponentData('work-data');
+  const location = useLocation();
+  const lastHash = useRef('');
+
+  useEffect(() => {
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1);
+    }
+
+    let attempts = 0;
+    const maxAttempts = 2;
+
+    const tryScroll = () => {
+      const element = document.getElementById(lastHash.current);
+      if (lastHash.current && element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          lastHash.current = '';
+        }, 100);
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(tryScroll, 100); // retry in 100ms
+      } else {
+        // eslint-disable-next-line no-console
+        console.warn(
+          `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
+        );
+      }
+    };
+    tryScroll();
+  }, [location]);
 
   return (
-    <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
+    <Loading loading={false} error={null} isDarkMode={isDarkMode}>
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -33,6 +61,7 @@ function ProjectsPage() {
 
           <div className="relative">
             <LargeBox
+              id="Portfolio"
               title="Portfolio"
               subtitle="Personal"
               description="The Portfolio You're using now, I've created in my own time to help show my software expierence. I used react js to create the website
@@ -47,6 +76,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="ShefJam9"
               title="Rogue-like Game"
               subtitle="SheffJam 9"
               description="My team competed in a GameJam, where we created a rougue-like game to fit the theme 'Villian'. 
@@ -61,6 +91,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="FinanceFate"
               title="Finance Fate"
               subtitle="HackSheffield7"
               description="We created a guessing game using the data provided from Capital One's API. We used C# ASP.NET for the backend and Bootstrap for the frontend to achieve this.
@@ -73,6 +104,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="ChessGame"
               title="Chess Game"
               subtitle="A-level Computer Science Project"
               description="For my A-level computer Sciience project I created a chess game with Player vs Player, Player vs Ai and a Statistics page.
@@ -86,6 +118,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="SimcypSimulatorV24"
               title="Simcyp Simulator V24"
               subtitle="Certara"
               description="I contributed to multiple documents, as well as fixing bugs in the C# Wpf Frontend. 
@@ -99,6 +132,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="SimcypSimulatorV25"
               title="Simcyp Simulator V25"
               subtitle="Certara"
               description="I worked on many different parts of the 2025 version of the Simcyp Simulator. I also in adition to implementing features and writing units,
@@ -107,11 +141,12 @@ function ProjectsPage() {
               skills={['C# wpf', 'C++', 'JavaScript', 'Test Complete']}
               timePeriod="January - July 2025"
               hide={filter != 'all' && filter != 'work'}
-              key={4}
+              key={5}
             />
           </div>
         </div>
       </div>
+      <p id="3">Hi!</p>
     </Loading>
   );
 }
