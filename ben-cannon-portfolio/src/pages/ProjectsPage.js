@@ -146,7 +146,6 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
-      <p id="3">Hi!</p>
     </Loading>
   );
 }
