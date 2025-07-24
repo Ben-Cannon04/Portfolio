@@ -46,7 +46,7 @@ function App() {
             : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
         }`}
       >
-        <NavBar isDarkMode={isDarkMode} />
+        <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <Outlet context={[isDarkMode, setIsDarkMode]} />
       </main>
     </>

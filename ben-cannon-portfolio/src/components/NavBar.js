@@ -10,11 +10,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import DarkModeToggle from './DarkModeToggle';
 
 NavBar.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
+  setIsDarkMode: PropTypes.func.isRequired,
 };
-function NavBar({ isDarkMode }) {
+function NavBar({ isDarkMode, setIsDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -65,6 +67,12 @@ function NavBar({ isDarkMode }) {
             >
               Menu
             </h2>
+
+            <DarkModeToggle
+              isDarkMode={isDarkMode}
+              setIsDarkMode={setIsDarkMode}
+            />
+
             <button
               onClick={closeNav}
               className={`p-1 rounded-md hover:bg-opacity-80 transition-colors`}
