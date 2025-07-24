@@ -68,7 +68,10 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
               Menu
             </h2>
 
-            <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            <DarkModeToggle
+              isDarkMode={isDarkMode}
+              setIsDarkMode={setIsDarkMode}
+            />
 
             <button
               onClick={closeNav}
