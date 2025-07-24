@@ -21,10 +21,10 @@ function Skill({ text, to, isClickable = false }) {
     <span
       className={`px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm transition flex items-center gap-1 
         bg-blue-50 text-blue-700 hover:scale-105 shadow-sm hover:shadow-md ${
-        isClickable
-          ? 'cursor-pointer hover:bg-blue-100 active:bg-blue-200'
-          : ' cursor-default'
-      }`}
+          isClickable
+            ? 'cursor-pointer hover:bg-blue-100 active:bg-blue-200'
+            : ' cursor-default'
+        }`}
       onClick={handleClick}
     >
       {text}

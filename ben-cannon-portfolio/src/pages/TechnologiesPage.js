@@ -28,10 +28,11 @@ function TechnologiesPage() {
                   to: '/Portfolio/work',
                   isClickable: true,
                 },
-                { text: 'Simcyp Simulator V25', 
+                {
+                  text: 'Simcyp Simulator V25',
                   to: '/Portfolio/work',
                   isClickable: true,
-                 },
+                },
               ]}
               proficiency="Advanced"
               key={0}
@@ -51,10 +52,11 @@ function TechnologiesPage() {
                   to: '/Portfolio/projects',
                   isClickable: true,
                 },
-                { text: 'Chess Game', 
+                {
+                  text: 'Chess Game',
                   to: '/Portfolio/work',
                   isClickable: true,
-                 },
+                },
               ]}
               proficiency="Intermediate"
               key={1}
