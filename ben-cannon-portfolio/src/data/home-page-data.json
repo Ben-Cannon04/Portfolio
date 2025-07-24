@@ -24,9 +24,9 @@
     },
     {
       "type": "DescriptionBox",
-      "title": "Languages / Contact Page",
-      "content": "In my spare time I have competed in multiple Hackathons and GameJams. I have also been the treasurer of the Game Development Society at the University of Sheffield",
-      "link": "/Portfolio/extracurricular",
+      "title": "Technologies",
+      "content": "Go to this page to see the languages and frameworks I'm profficient in.",
+      "link": "/Portfolio/technologies",
       "icon": "EmojiEventsIcon"
     },
     {
