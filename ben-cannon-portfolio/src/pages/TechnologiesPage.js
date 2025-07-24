@@ -10,7 +10,7 @@ function TechnologiesPage() {
   const [filter, setFilter] = useState('all');
 
   return (
-    <Loading isDarkMode={isDarkMode}>
+    <Loading loading={false} error={null} isDarkMode={isDarkMode}>
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -36,12 +36,12 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Simcyp Simulator V24',
-                  to: '/Portfolio/work',
+                  to: '/Portfolio/projects#SimcypSimulatorV24',
                   isClickable: true,
                 },
                 {
                   text: 'Simcyp Simulator V25',
-                  to: '/Portfolio/work',
+                  to: '/Portfolio/projects/#SimcypSimulatorV25',
                   isClickable: true,
                 },
               ]}
@@ -62,12 +62,12 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Rogue-like Game',
-                  to: '/Portfolio/projects',
+                  to: '/Portfolio/projects#SheffJam9',
                   isClickable: true,
                 },
                 {
                   text: 'Chess Game',
-                  to: '/Portfolio/work',
+                  to: '/Portfolio/projects#ChessGame',
                   isClickable: true,
                 },
               ]}
@@ -88,7 +88,7 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Portfolio',
-                  to: '/Portfolio/projects',
+                  to: '/Portfolio/projects#Portfolio',
                   isClickable: true,
                 },
                 {
@@ -148,7 +148,7 @@ function TechnologiesPage() {
               ]}
               proficiency="Intermediate"
               hide={filter != 'all' && filter != 'JavaScript'}
-              key={2}
+              key={22}
             >
               <p>
                 I&apos;ve used TypeScript in industry. I&apos;m also using
@@ -162,12 +162,12 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Simcyp Simulator V24',
-                  to: '/Portfolio/work',
+                  to: '/Portfolio/projects#SimcypSimulatorV24',
                   isClickable: true,
                 },
                 {
                   text: 'Simcyp Simulator V25',
-                  to: '/Portfolio/work',
+                  to: '/Portfolio/projects#SimcypSimulatorV25',
                   isClickable: true,
                 },
               ]}
@@ -188,7 +188,7 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Finanace Fate',
-                  to: '/Portfolio/projects',
+                  to: '/Portfolio/projects#FinanceFate',
                   isClickable: true,
                 },
               ]}

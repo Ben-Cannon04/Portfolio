@@ -7,6 +7,7 @@ import Skill from './Skill';
 import { Link } from 'react-router-dom';
 
 LargeBox.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   timePeriod: PropTypes.string,
@@ -24,6 +25,7 @@ LargeBox.propTypes = {
 };
 
 function LargeBox({
+  id,
   title,
   subtitle,
   timePeriod,
@@ -44,6 +46,7 @@ function LargeBox({
   const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (
     <div
+      id={id}
       className={`relative mb-8 sm:mb-12 rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-border-dark' : 'border-border-light'}`}
     >
       <div
