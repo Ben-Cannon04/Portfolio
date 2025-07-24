@@ -13,14 +13,14 @@ function TechnologiesPage() {
             <h1
               className={`text-2xl sm:text-4xl font-bold mb-2 sm:mb-4 ${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
             >
-              Work
+              Software Technologies
             </h1>
           </div>
 
           <div className="relative">
             <TechBox
-              title="C#"
-              subtitle=""
+              title="Wpf"
+              subtitle="C#"
               isDarkMode={isDarkMode}
               projects={[
                 {
@@ -28,41 +28,61 @@ function TechnologiesPage() {
                   to: '/Portfolio/work',
                   isClickable: true,
                 },
-                { text: 'Simcyp Simulator V25', link: '/Portfolio/work' },
-                { text: 'Finance Fate', link: '/Portfolio/projects' },
+                { text: 'Simcyp Simulator V25', 
+                  to: '/Portfolio/work',
+                  isClickable: true,
+                 },
               ]}
               proficiency="Advanced"
               key={0}
             >
               <p>
                 I&apos;ve used C# in a series of personal project as well as in
-                industry . I&apos;ve used it with unity and wpf.
+                industry .
               </p>
             </TechBox>
             <TechBox
-              title="React"
-              subtitle=""
-              description="I've used React in a series of ***personal projects*** as well as at ***university***. I've also begun learning react native with expo."
+              title="Unity"
+              subtitle="C#"
               isDarkMode={isDarkMode}
-              grade="Intermediate"
-              key={0}
-            />
+              projects={[
+                {
+                  text: 'Rogue-like Game',
+                  to: '/Portfolio/projects',
+                  isClickable: true,
+                },
+                { text: 'Chess Game', 
+                  to: '/Portfolio/work',
+                  isClickable: true,
+                 },
+              ]}
+              proficiency="Intermediate"
+              key={1}
+            >
+              <p>
+                I&apos;ve used C# in a series of personal project as well as in
+                industry .
+              </p>
+            </TechBox>
             <TechBox
-              title="Java"
-              subtitle=""
-              description="I've used Java at ***university***. I would like to learn java Spring boot"
+              title="ASP.Net"
+              subtitle="C#"
               isDarkMode={isDarkMode}
-              grade="In Progress"
-              key={0}
-            />
-            <TechBox
-              title="Haskell"
-              subtitle=""
-              description="Uni"
-              isDarkMode={isDarkMode}
-              grade="Beginner"
-              key={0}
-            />
+              projects={[
+                {
+                  text: 'Finanace Fate',
+                  to: '/Portfolio/projects',
+                  isClickable: true,
+                },
+              ]}
+              proficiency="Beginner"
+              key={2}
+            >
+              <p>
+                I&apos;ve used C# in a series of personal project as well as in
+                industry .
+              </p>
+            </TechBox>
           </div>
         </div>
       </div>

@@ -95,7 +95,7 @@ function TechBox({
                   <span
                     className={`${isDarkMode ? 'text-primary-dark' : 'text-gray-600'} text-sm text-gray-600 mr-2`}
                   >
-                    Grade:
+                    Proficiency:
                   </span>
                   <span
                     className={`font-semibold px-3 py-1 rounded-lg text-sm ${getProficiencyStyles(proficiency)}`}
