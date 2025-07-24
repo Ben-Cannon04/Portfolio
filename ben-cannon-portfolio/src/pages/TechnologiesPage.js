@@ -50,7 +50,8 @@ function TechnologiesPage() {
               key={0}
             >
               <p>
-                I&apos;m expirenced in c# wpf, using it for 13 months in industry.
+                I&apos;m expirenced in c# wpf, using it for 13 months in
+                industry.
               </p>
             </TechBox>
 
@@ -75,7 +76,8 @@ function TechnologiesPage() {
               key={1}
             >
               <p>
-                I&apos;ve used unity in personal projects, school projects as well as at GameJams and Game development Society.
+                I&apos;ve used unity in personal projects, school projects as
+                well as at GameJams and Game development Society.
               </p>
             </TechBox>
 
@@ -100,7 +102,9 @@ function TechnologiesPage() {
               key={2}
             >
               <p>
-                I&apos;ve used React in industry as well as at university and in personal projects. I&apos;m also learning react native with Expo in my own time currently.
+                I&apos;ve used React in industry as well as at university and in
+                personal projects. I&apos;m also learning react native with Expo
+                in my own time currently.
               </p>
             </TechBox>
 
@@ -125,8 +129,10 @@ function TechnologiesPage() {
               key={3}
             >
               <p>
-                I&apos;ve used Java throughout university, create console application and Java Swing Applications. I&apos;ve also used it in industry as a backend with FFmpeg. 
-                In the future I would be interested in learning Java Spring Boot.
+                I&apos;ve used Java throughout university, create console
+                application and Java Swing Applications. I&apos;ve also used it
+                in industry as a backend with FFmpeg. In the future I would be
+                interested in learning Java Spring Boot.
               </p>
             </TechBox>
 
@@ -145,7 +151,8 @@ function TechnologiesPage() {
               key={2}
             >
               <p>
-                I&apos;ve used TypeScript in industry. I&apos;m also using typescript in my own time
+                I&apos;ve used TypeScript in industry. I&apos;m also using
+                typescript in my own time
               </p>
             </TechBox>
 
@@ -169,7 +176,8 @@ function TechnologiesPage() {
               key={4}
             >
               <p>
-                I&apos;ve used C++ in Industry for the backend of the Simcyp Simulator.
+                I&apos;ve used C++ in Industry for the backend of the Simcyp
+                Simulator.
               </p>
             </TechBox>
 
@@ -189,7 +197,8 @@ function TechnologiesPage() {
               key={6}
             >
               <p>
-                I have a small  expierence with Asp.Net and would be intersed in furthering my knowledge.
+                I have a small expierence with Asp.Net and would be intersed in
+                furthering my knowledge.
               </p>
             </TechBox>
           </div>
