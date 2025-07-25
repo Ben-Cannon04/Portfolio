@@ -4,7 +4,7 @@ import Skill from './Skill';
 SkillsBox.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  skills: PropTypes.arrayOf(PropTypes.string),
+  skills: PropTypes.array,
   isDarkMode: PropTypes.bool.isRequired,
 };
 
@@ -26,8 +26,8 @@ function SkillsBox({ title, content, skills, isDarkMode }) {
       </p>
 
       <div className="flex flex-wrap gap-1 sm:gap-2 ">
-        {skills?.map((skill, index) => (
-          <Skill key={index} text={skill} />
+        {skills?.map(({ text, to, isClickable }, index) => (
+          <Skill key={index} text={text} to={to} isClickable={isClickable} />
         ))}
       </div>
     </div>
