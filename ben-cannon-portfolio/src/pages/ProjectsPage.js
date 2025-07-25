@@ -76,6 +76,34 @@ function ProjectsPage() {
             />
 
             <LargeBox
+              id="10"
+              title="Introduction To Software Engineering Team Project"
+              subtitle="University Year 1"
+              description="I collaborated within in a team of 8, using ruby with Sinatra to create a web application.
+              This project helped improve my communicaton and presenting skills."
+              isDarkMode={isDarkMode}
+              skills={['Ruby', 'Communication', 'Presenting']}
+              timePeriod="2022 - 2023"
+              hide={filter != 'all' && filter != 'education'}
+              key={10}
+            />
+
+            <LargeBox
+              id="10"
+              title="Software Hut Team Project"
+              subtitle="University Year 2"
+              description="I worked within a team of 6,  in order to create a website which acted as a proof of concept.
+              We used ruby on rails backend, react frontend with RTK query for the middleware and Redux for the state management. 
+              I acted as the front-end lead, where I was responsible for deigning the frontend architecture, frontend tasks as well as the implementation.
+              I also lead the presentation of the project to the client."
+              isDarkMode={isDarkMode}
+              skills={['Ruby on Rails', 'React', 'Presenting']}
+              timePeriod="2023 - 2024"
+              hide={filter != 'all' && filter != 'education'}
+              key={10}
+            />
+
+            <LargeBox
               id="ShefJam9"
               title="Rogue-like Game"
               subtitle="SheffJam 9"
