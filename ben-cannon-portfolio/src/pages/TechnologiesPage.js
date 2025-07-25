@@ -37,12 +37,10 @@ function TechnologiesPage() {
                 {
                   text: 'Simcyp Simulator V24',
                   to: '/Portfolio/projects#SimcypSimulatorV24',
-                  isClickable: true,
                 },
                 {
                   text: 'Simcyp Simulator V25',
                   to: '/Portfolio/projects/#SimcypSimulatorV25',
-                  isClickable: true,
                 },
               ]}
               proficiency="Advanced"
@@ -63,12 +61,10 @@ function TechnologiesPage() {
                 {
                   text: 'Rogue-like Game',
                   to: '/Portfolio/projects#SheffJam9',
-                  isClickable: true,
                 },
                 {
                   text: 'Chess Game',
                   to: '/Portfolio/projects#ChessGame',
-                  isClickable: true,
                 },
               ]}
               proficiency="Intermediate"
@@ -89,12 +85,10 @@ function TechnologiesPage() {
                 {
                   text: 'Portfolio',
                   to: '/Portfolio/projects#Portfolio',
-                  isClickable: true,
                 },
                 {
                   text: 'University',
                   to: '/Portfolio/education',
-                  isClickable: true,
                 },
               ]}
               proficiency="Intermediate"
@@ -116,12 +110,10 @@ function TechnologiesPage() {
                 {
                   text: 'University',
                   to: '/Portfolio/education',
-                  isClickable: true,
                 },
                 {
                   text: 'Yunex Traffic',
                   to: '/Portfolio/work',
-                  isClickable: true,
                 },
               ]}
               proficiency="Intermediate"
@@ -143,7 +135,6 @@ function TechnologiesPage() {
                 {
                   text: 'Yunex Traffic',
                   to: '/Portfolio/work',
-                  isClickable: true,
                 },
               ]}
               proficiency="Intermediate"
@@ -163,12 +154,10 @@ function TechnologiesPage() {
                 {
                   text: 'Simcyp Simulator V24',
                   to: '/Portfolio/projects#SimcypSimulatorV24',
-                  isClickable: true,
                 },
                 {
                   text: 'Simcyp Simulator V25',
                   to: '/Portfolio/projects#SimcypSimulatorV25',
-                  isClickable: true,
                 },
               ]}
               proficiency="Beginner"
@@ -189,7 +178,6 @@ function TechnologiesPage() {
                 {
                   text: 'Finanace Fate',
                   to: '/Portfolio/projects#FinanceFate',
-                  isClickable: true,
                 },
               ]}
               proficiency="Beginner"
