@@ -100,7 +100,7 @@ function ProjectsPage() {
               skills={['Ruby on Rails', 'React', 'Presenting']}
               timePeriod="2023 - 2024"
               hide={filter != 'all' && filter != 'education'}
-              key={10}
+              key={11}
             />
 
             <LargeBox
