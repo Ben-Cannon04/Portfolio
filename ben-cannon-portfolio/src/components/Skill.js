@@ -7,7 +7,7 @@ Skill.propTypes = {
   to: PropTypes.string,
 };
 
-function Skill({ text, to}) {
+function Skill({ text, to }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -27,9 +27,7 @@ function Skill({ text, to}) {
       onClick={handleClick}
     >
       {text}
-      {to && (
-        <KeyboardArrowRightOutlinedIcon className="w-3 h-3 ml-1" />
-      )}
+      {to && <KeyboardArrowRightOutlinedIcon className="w-3 h-3 ml-1" />}
     </span>
   );
 }

@@ -76,7 +76,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
-              id="10"
+              id="IntroductionToSoftwareEngineeringTeamProject"
               title="Introduction To Software Engineering Team Project"
               subtitle="University Year 1"
               description="I collaborated within in a team of 8, using ruby with Sinatra to create a web application.
@@ -89,7 +89,7 @@ function ProjectsPage() {
             />
 
             <LargeBox
-              id="10"
+              id="SoftwareHut"
               title="Software Hut Team Project"
               subtitle="University Year 2"
               description="I worked within a team of 6,  in order to create a website which acted as a proof of concept.
