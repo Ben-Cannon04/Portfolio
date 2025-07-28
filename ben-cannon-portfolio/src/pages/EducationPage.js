@@ -269,7 +269,7 @@ function EducationPage() {
                 The module emphasized teamwork, communication, and use of industry tools and methodologies, including requirements engineering,
                  project management, modelling, testing, and client interaction."
                 skills={[
-                  { text: 'Agike' },
+                  { text: 'Agile' },
                   { text: 'Client Communication' },
                   {
                     text: 'Team Project',
@@ -301,10 +301,10 @@ function EducationPage() {
               This helped me develop my communication and Technical skills."
               isDarkMode={isDarkMode}
               skills={['C#', 'C++', 'Communication']}
-              timePeriod="2024-2024"
+              timePeriod="June 2024 - July 2025"
               grade="Pass"
               icon={<EngineeringIcon />}
-              link="/Portfolio/work"
+              link="/Portfolio/work#Certara"
               key={3}
             />
 
