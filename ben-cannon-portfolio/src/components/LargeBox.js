@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useState } from 'react';
 import Skill from './Skill';
-import { Link } from 'react-router-dom';
 
 LargeBox.propTypes = {
   id: PropTypes.string,
@@ -117,6 +115,7 @@ function LargeBox({
                 {skills.map((skill, id) => (
                   <Skill key={id} text={skill} />
                 ))}
+                <Skill text={linkTitle} to={link} key={999}/>
               </div>
             </div>
           )}
@@ -142,17 +141,6 @@ function LargeBox({
             </div>
           )}
         </div>
-
-        {link && (
-          <Link to={link}>
-            <div className="flex w-full justify-end rounded-xl">
-              <div className="flex bg-gray-100 text-gray-700 w-40 justify-center rounded-tl-xl px-3 py-1 text-sm font-medium gap-2">
-                {linkTitle}
-                <OpenInNewIcon />
-              </div>
-            </div>
-          </Link>
-        )}
 
         {isExpanded && (
           <div
