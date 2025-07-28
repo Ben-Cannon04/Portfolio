@@ -24,7 +24,8 @@ function WorkPage() {
             <LargeBox
               title="Software Intern"
               subtitle="Yunex Traffic"
-              description=""
+              description="Yunex Traffic is a global leader in Intelligent Transport Systems (ITS) and Smart Mobility solutions,
+                 operating in over 40 countries and serving more than 600 cities worldwide. I worked in the traffic enforcement section"
               isDarkMode={isDarkMode}
               skills={[
                 'Java',
@@ -37,26 +38,41 @@ function WorkPage() {
               expandedByDefault={true}
               key={0}
             >
-              <h1>What Yunex Traffic Do?</h1>
-              <p>stuff...</p>
-              <h1>What I worked on?</h1>
-              <p>stuff...</p>
+              <p
+                className={`${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              >
+                I worked on multiple internal tools, as well as creating a
+                program to create different test cases. I used core Java, python
+                and react to create the tools.
+              </p>
             </LargeBox>
 
             <LargeBox
+              id="Certara"
               title="Juniour Software Engineer"
               subtitle="Certara"
-              description=""
+              description="Certara is a global leader in biosimulation and model-informed drug development, providing software, scientific expertise,
+               and services to accelerate and optimize the drug development process. I worked on the The Simcyp Simulator which is used to predict how drugs behave in the human body."
               isDarkMode={isDarkMode}
               skills={['C# wpf', 'C++', 'Design Patterns', 'Git']}
               timePeriod="June 2024 - July 2025"
               expandedByDefault={true}
               key={1}
             >
-              <h1>What Certara Do?</h1>
-              <p>stuff...</p>
-              <h1>What I worked on?</h1>
-              <p>stuff...</p>
+              <p
+                className={`${isDarkMode ? 'text-primary-dark' : 'text-primary-light'}`}
+              >
+                During my placement, I worked on multiple versions of the Simcyp
+                Simulator using an agile-inspired development process to
+                implement features, fix bugs, and address technical debt. I
+                developed using C# with WPF for the frontend and C++ for the
+                backend. I gained experience with AutoMock and Autofac for unit
+                testing and dependency injection, and used TestComplete with
+                JavaScript to maintain regression tests. I also worked with
+                NuGet packages and followed a used feature-branches. This role
+                enhanced my full-stack development skills and exposed me to
+                enterprise-grade software engineering practices.
+              </p>
             </LargeBox>
           </div>
         </div>
