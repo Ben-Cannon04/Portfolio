@@ -1,44 +1,14 @@
-import { useLocation, useOutletContext } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import Loading from '../components/Loading';
 import LargeBox from '../components/LargeBox';
 import SheffJam9Image from '../assets/images/SheffJam9.png';
 import ChessImage from '../assets/images/chess.png';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Filter from '../components/Filter';
 
 function ProjectsPage() {
   const [isDarkMode] = useOutletContext();
   const [filter, setFilter] = useState('all');
-  const location = useLocation();
-  const lastHash = useRef('');
-
-  useEffect(() => {
-    if (location.hash) {
-      lastHash.current = location.hash.slice(1);
-    }
-
-    let attempts = 0;
-    const maxAttempts = 2;
-
-    const tryScroll = () => {
-      const element = document.getElementById(lastHash.current);
-      if (lastHash.current && element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          lastHash.current = '';
-        }, 100);
-      } else if (attempts < maxAttempts) {
-        attempts++;
-        setTimeout(tryScroll, 100); // retry in 100ms
-      } else {
-        // eslint-disable-next-line no-console
-        console.warn(
-          `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
-        );
-      }
-    };
-    tryScroll();
-  }, [location]);
 
   return (
     <Loading loading={false} error={null} isDarkMode={isDarkMode}>

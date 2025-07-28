@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import useLocalStorage from 'use-local-storage';
 import NavBar from './components/NavBar';
 
@@ -36,6 +36,37 @@ function App() {
       );
     }
   }, [isDarkMode]);
+
+  const location = useLocation();
+    const lastHash = useRef('');
+  
+    useEffect(() => {
+      if (location.hash) {
+        lastHash.current = location.hash.slice(1);
+      }
+  
+      let attempts = 0;
+      const maxAttempts = 2;
+  
+      const tryScroll = () => {
+        const element = document.getElementById(lastHash.current);
+        if (lastHash.current && element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            lastHash.current = '';
+          }, 100);
+        } else if (attempts < maxAttempts) {
+          attempts++;
+          setTimeout(tryScroll, 100); // retry in 100ms
+        } else {
+          // eslint-disable-next-line no-console
+          console.warn(
+            `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
+          );
+        }
+      };
+      tryScroll();
+    }, [location]);
 
   return (
     <>
