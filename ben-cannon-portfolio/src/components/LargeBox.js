@@ -12,7 +12,6 @@ LargeBox.propTypes = {
   subtitle: PropTypes.string,
   timePeriod: PropTypes.string,
   description: PropTypes.string.isRequired,
-  icon: PropTypes.node,
   grade: PropTypes.string,
   skills: PropTypes.array,
   children: PropTypes.node,
