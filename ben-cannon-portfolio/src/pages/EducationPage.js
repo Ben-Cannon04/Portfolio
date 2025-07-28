@@ -52,7 +52,7 @@ function EducationPage() {
                   { text: 'C#' },
                   { text: 'Unity' },
                   { text: 'Algorithms and Data Structures' },
-                  { text: 'Course Work', to: '/Portfolio/projects#ChessGame' },
+                  { text: 'Course Work', to: '/projects#ChessGame' },
                 ]}
                 isDarkMode={isDarkMode}
               />
@@ -112,7 +112,7 @@ function EducationPage() {
                   { text: 'Communication' },
                   {
                     text: 'Team Project',
-                    to: '/Portfolio/projects#IntroductionToSoftwareEngineeringTeamProject',
+                    to: '/projects#IntroductionToSoftwareEngineeringTeamProject',
                   },
                 ]}
                 isDarkMode={isDarkMode}
@@ -273,7 +273,7 @@ function EducationPage() {
                   { text: 'Client Communication' },
                   {
                     text: 'Team Project',
-                    to: '/Portfolio/projects#SoftwareHut',
+                    to: '/projects#SoftwareHut',
                   },
                 ]}
                 isDarkMode={isDarkMode}
@@ -304,7 +304,7 @@ function EducationPage() {
               timePeriod="June 2024 - July 2025"
               grade="Pass"
               icon={<EngineeringIcon />}
-              link="/Portfolio/work#Certara"
+              link="/work#Certara"
               key={3}
             />
 

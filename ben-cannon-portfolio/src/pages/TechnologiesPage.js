@@ -36,11 +36,11 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Simcyp Simulator V24',
-                  to: '/Portfolio/projects#SimcypSimulatorV24',
+                  to: '/projects#SimcypSimulatorV24',
                 },
                 {
                   text: 'Simcyp Simulator V25',
-                  to: '/Portfolio/projects/#SimcypSimulatorV25',
+                  to: '/projects/#SimcypSimulatorV25',
                 },
               ]}
               proficiency="Advanced"
@@ -60,11 +60,11 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Rogue-like Game',
-                  to: '/Portfolio/projects#SheffJam9',
+                  to: '/projects#SheffJam9',
                 },
                 {
                   text: 'Chess Game',
-                  to: '/Portfolio/projects#ChessGame',
+                  to: '/projects#ChessGame',
                 },
               ]}
               proficiency="Intermediate"
@@ -84,11 +84,11 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Portfolio',
-                  to: '/Portfolio/projects#Portfolio',
+                  to: '/projects#Portfolio',
                 },
                 {
                   text: 'University',
-                  to: '/Portfolio/education',
+                  to: '/education',
                 },
               ]}
               proficiency="Intermediate"
@@ -109,11 +109,11 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'University',
-                  to: '/Portfolio/education',
+                  to: '/education',
                 },
                 {
                   text: 'Yunex Traffic',
-                  to: '/Portfolio/work',
+                  to: '/work',
                 },
               ]}
               proficiency="Intermediate"
@@ -134,7 +134,7 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Yunex Traffic',
-                  to: '/Portfolio/work',
+                  to: '/work',
                 },
               ]}
               proficiency="Intermediate"
@@ -153,11 +153,11 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Simcyp Simulator V24',
-                  to: '/Portfolio/projects#SimcypSimulatorV24',
+                  to: '/projects#SimcypSimulatorV24',
                 },
                 {
                   text: 'Simcyp Simulator V25',
-                  to: '/Portfolio/projects#SimcypSimulatorV25',
+                  to: '/projects#SimcypSimulatorV25',
                 },
               ]}
               proficiency="Beginner"
@@ -177,7 +177,7 @@ function TechnologiesPage() {
               projects={[
                 {
                   text: 'Finanace Fate',
-                  to: '/Portfolio/projects#FinanceFate',
+                  to: '/projects#FinanceFate',
                 },
               ]}
               proficiency="Beginner"
