@@ -38,35 +38,35 @@ function App() {
   }, [isDarkMode]);
 
   const location = useLocation();
-    const lastHash = useRef('');
-  
-    useEffect(() => {
-      if (location.hash) {
-        lastHash.current = location.hash.slice(1);
+  const lastHash = useRef('');
+
+  useEffect(() => {
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1);
+    }
+
+    let attempts = 0;
+    const maxAttempts = 2;
+
+    const tryScroll = () => {
+      const element = document.getElementById(lastHash.current);
+      if (lastHash.current && element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          lastHash.current = '';
+        }, 100);
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(tryScroll, 100); // retry in 100ms
+      } else {
+        // eslint-disable-next-line no-console
+        console.warn(
+          `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
+        );
       }
-  
-      let attempts = 0;
-      const maxAttempts = 2;
-  
-      const tryScroll = () => {
-        const element = document.getElementById(lastHash.current);
-        if (lastHash.current && element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            lastHash.current = '';
-          }, 100);
-        } else if (attempts < maxAttempts) {
-          attempts++;
-          setTimeout(tryScroll, 100); // retry in 100ms
-        } else {
-          // eslint-disable-next-line no-console
-          console.warn(
-            `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
-          );
-        }
-      };
-      tryScroll();
-    }, [location]);
+    };
+    tryScroll();
+  }, [location]);
 
   return (
     <>

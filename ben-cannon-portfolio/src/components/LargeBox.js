@@ -115,7 +115,7 @@ function LargeBox({
                 {skills.map((skill, id) => (
                   <Skill key={id} text={skill} />
                 ))}
-                <Skill text={linkTitle} to={link} key={999}/>
+                {link && <Skill text={linkTitle} to={link} key={999} />}
               </div>
             </div>
           )}
