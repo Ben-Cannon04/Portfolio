@@ -86,7 +86,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
           <ul className="space-y-2">
             <li>
               <Link
-                to="/Portfolio"
+                to="/"
                 className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
                 onClick={closeNav}
               >
@@ -96,7 +96,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
             </li>
             <li>
               <Link
-                to="/Portfolio/work"
+                to="/work"
                 className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
                 onClick={closeNav}
               >
@@ -106,7 +106,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
             </li>
             <li>
               <Link
-                to="/Portfolio/education"
+                to="/education"
                 className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
                 onClick={closeNav}
               >
@@ -116,7 +116,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
             </li>
             <li>
               <Link
-                to="/Portfolio/projects"
+                to="/projects"
                 className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
                 onClick={closeNav}
               >
@@ -126,7 +126,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
             </li>
             <li>
               <Link
-                to="/Portfolio/technologies"
+                to="/technologies"
                 className={`flex items-center space-x-3 px-3 py-2 rounded-md ${isDarkMode ? 'text-primary-dark hover:bg-gray-700 ' : 'text-primary-light hover:bg-gray-200 '} transition-colors`}
                 onClick={closeNav}
               >

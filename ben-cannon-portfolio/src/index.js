@@ -11,27 +11,27 @@ import TechnologiesPage from './pages/TechnologiesPage';
 
 const router = createBrowserRouter([
   {
-    path: '/Portfolio',
+    path: '/',
     element: <App />,
     children: [
       {
-        path: '/Portfolio/',
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: '/Portfolio/work',
+        path: '/work',
         element: <WorkPage />,
       },
       {
-        path: '/Portfolio/education',
+        path: '/education',
         element: <EducationPage />,
       },
       {
-        path: '/Portfolio/projects',
+        path: '/projects',
         element: <ProjectsPage />,
       },
       {
-        path: '/Portfolio/technologies',
+        path: '/technologies',
         element: <TechnologiesPage />,
       },
     ],
