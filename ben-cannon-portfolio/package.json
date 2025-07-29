@@ -1,5 +1,6 @@
 {
   "name": "ben-cannon-portfolio",
+  "type": "module",
   "version": "0.1.0",
   "homepage": "https://Ben-Cannon04.github.io",
   "private": true,
@@ -21,8 +22,9 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
@@ -49,10 +51,12 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "gh-pages": "^6.1.1",
     "prettier": "^3.6.2",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "vite": "^7.0.6"
   }
 }
