@@ -64,18 +64,16 @@ function App() {
   }, [location]);
 
   return (
-    <>
-      <main
-        className={`text-center py-2 min-h-screen ${
-          isDarkMode
-            ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900'
-            : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
-        }`}
-      >
-        <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        <Outlet context={[isDarkMode, setIsDarkMode]} />
-      </main>
-    </>
+    <main
+      className={`text-center py-2 min-h-screen ${
+        isDarkMode
+          ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900'
+          : 'bg-gradient-to-br from-blue-50 via-white to-purple-50'
+      }`}
+    >
+      <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Outlet context={[isDarkMode, setIsDarkMode]} />
+    </main>
   );
 }
 
