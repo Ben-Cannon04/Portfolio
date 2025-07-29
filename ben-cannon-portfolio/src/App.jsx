@@ -64,7 +64,6 @@ function App() {
   }, [location]);
 
   return (
-    <>
       <main
         className={`text-center py-2 min-h-screen ${
           isDarkMode
@@ -75,7 +74,6 @@ function App() {
         <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <Outlet context={[isDarkMode, setIsDarkMode]} />
       </main>
-    </>
   );
 }
 
