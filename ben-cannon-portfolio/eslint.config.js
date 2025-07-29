@@ -1,11 +1,11 @@
-import js from '@eslint/js'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import globals from 'globals'
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 export default [
   {
-    ignores: ['node_modules', 'build', 'dist', '.*']
+    ignores: ['node_modules', 'build', 'dist', '.*'],
   },
   {
     files: ['**/*.{js,jsx}'],
@@ -15,7 +15,7 @@ export default [
         ...globals.browser,
         ...globals.node,
         ...globals.commonjs,
-        ...globals.jest
+        ...globals.jest,
       },
       parserOptions: {
         ecmaVersion: 2023,
@@ -23,10 +23,10 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { 
-      react: { 
-        version: 'detect' 
-      } 
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
     plugins: {
       react,
@@ -37,9 +37,9 @@ export default [
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
-      
+
       'no-console': 'error',
       'react/react-in-jsx-scope': 'off',
     },
   },
-]
+];
