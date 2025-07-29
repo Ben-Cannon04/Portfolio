@@ -54,7 +54,6 @@ const HomePage = () => {
               title="Work Experience"
               content="I have worked as a software intern at Yunex Traffic, as well as a junior developer at Certara"
               link="/work"
-              icon="WorkIcon"
             />
 
             <DarkModeBox
@@ -67,7 +66,6 @@ const HomePage = () => {
               title="Technologies"
               content="Go to this page to see the languages and frameworks I'm profficient in."
               link="/technologies"
-              icon="EmojiEventsIcon"
             />
 
             <IconBox
@@ -81,7 +79,6 @@ const HomePage = () => {
               title="Education"
               content="I'm currently partaking in my placement year of my computer science degree at the University of Sheffield. During these two years I have learnt java, javascript, haskell and ruby as well as improving my problem solving ability."
               link="/education"
-              icon="SchoolIcon"
             />
 
             <DescriptionBox
@@ -89,7 +86,6 @@ const HomePage = () => {
               title="Projects"
               content="I've completed projects inn different languages and frameworks for university, work and personal use. Click here for more."
               link="/projects"
-              icon="CodeIcon"
             />
           </div>
 
