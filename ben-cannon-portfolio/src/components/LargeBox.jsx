@@ -37,10 +37,10 @@ function LargeBox({
   hide = false,
   isDarkMode,
 }) {
+  const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   if (hide) {
     return null;
   }
-  const [isExpanded, setIsExpanded] = useState(expandedByDefault);
   return (
     <div
       id={id}

@@ -21,7 +21,7 @@ function Loading({ children, loading, error, isDarkMode }) {
     } else {
       setShowLoading(false);
     }
-  }, []);
+  }, [showLoading]);
 
   if (!showLoading) return <></>;
   if (loading)
