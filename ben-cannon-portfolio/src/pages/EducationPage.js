@@ -1,5 +1,4 @@
 import { useOutletContext } from 'react-router-dom';
-import { useComponentData } from '../services/JsonToComponentConverterService';
 import SchoolIcon from '@mui/icons-material/School';
 import LargeBox from '../components/LargeBox';
 import SkillsBox from '../components/SkillsBox';
@@ -9,10 +8,8 @@ import Loading from '../components/Loading';
 function EducationPage() {
   const [isDarkMode] = useOutletContext();
 
-  const { loading, error } = useComponentData('education-data');
-
   return (
-    <Loading loading={loading} error={error} isDarkMode={isDarkMode}>
+    <Loading loading={false} isDarkMode={isDarkMode}>
       <div className="min-h-screen py-6 px-3 sm:py-12 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
