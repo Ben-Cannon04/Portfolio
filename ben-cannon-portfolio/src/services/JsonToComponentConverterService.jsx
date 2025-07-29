@@ -76,26 +76,4 @@ export const renderComponent = (data, index, additionalProps = {}) => {
   }
 };
 
-export const useComponentData = dataPath => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const response = await import(`../data/${dataPath}.json`);
-
-        setData(response.default);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadData();
-  }, [dataPath]);
-
-  return { data, loading, error };
-};
