@@ -58,11 +58,6 @@ function App() {
       } else if (attempts < maxAttempts) {
         attempts++;
         setTimeout(tryScroll, 100); // retry in 100ms
-      } else {
-        // eslint-disable-next-line no-console
-        console.warn(
-          `Element with id '${lastHash.current}' not found after ${maxAttempts} attempts.`
-        );
       }
     };
     tryScroll();
